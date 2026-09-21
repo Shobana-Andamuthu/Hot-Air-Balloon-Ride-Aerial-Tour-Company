@@ -1,0 +1,109 @@
+﻿<!DOCTYPE html>
+<html lang="en" data-theme="light" dir="ltr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>AEROVA - Guest Login</title>
+  <meta name="description" content="Log in to your AEROVA Guest Account to access flight reservations, weather status, certificates, and photo albums.">
+
+  <!-- Bootstrap 5 CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+  <!-- Bootstrap Icons -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css" rel="stylesheet">
+  <!-- Master Stylesheet -->
+  <link rel="stylesheet" href="assets/css/style.css">
+  <!-- Favicon / Browser Tab Logo -->
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><defs><linearGradient id='aerovaGrad' x1='0%25' y1='0%25' x2='100%25' y2='100%25'><stop offset='0%25' stop-color='%23E87561'/><stop offset='100%25' stop-color='%235B9BD5'/></linearGradient></defs><circle cx='50' cy='50' r='50' fill='url(%23aerovaGrad)'/><path d='M50 18 C35 18 26 29 26 42 C26 53 35 63 43 69 L43 75 L57 75 L57 69 C65 63 74 53 74 42 C74 29 65 18 50 18 Z' fill='%23ffffff'/><rect x='44' y='78' width='12' height='8' rx='2' fill='%23ffffff'/><line x1='44' y1='73' x2='45' y2='78' stroke='%23ffffff' stroke-width='1.5'/><line x1='56' y1='73' x2='55' y2='78' stroke='%23ffffff' stroke-width='1.5'/></svg>" type="image/svg+xml">
+</head>
+<body>
+
+  <!-- PAGE PRELOADER -->
+  <div id="page-preloader" class="aerova-preloader">
+    <div class="preloader-inner">
+      <div class="preloader-balloon-wrapper">
+        <div class="preloader-ring"></div>
+        <div class="preloader-balloon">
+          <i class="bi bi-balloon-fill"></i>
+        </div>
+      </div>
+      <div class="preloader-brand">AEROVA</div>
+      <div class="preloader-subtext">Preparing Sky Horizon Experience...</div>
+      <div class="preloader-bar">
+        <div class="preloader-progress"></div>
+      </div>
+    </div>
+  </div>
+
+  <div class="auth-wrapper">
+    <!-- Left Column: Scenic Visual Banner -->
+    <div class="auth-sidebar-img" style="background-image: url('assets/images/hero-index.jpg');">
+      <div class="hero-overlay"></div>
+      <div class="position-relative z-2">
+        <a class="aerova-brand text-white mb-3" href="index.html">
+          <div class="aerova-brand-icon">
+            <i class="bi bi-balloon-fill"></i>
+          </div>
+          <span>AEROVA</span>
+        </a>
+        <h2 class="display-6 fw-bold text-white mb-2">Welcome Back to the Skies</h2>
+        <p class="opacity-90 mb-0">Access your active flight bookings, live weather status updates, and digital photo souvenirs.</p>
+      </div>
+    </div>
+
+    <!-- Right Column: Login Form Container -->
+    <div class="auth-form-container">
+      <div class="auth-form-box">
+        <div class="d-flex justify-content-between align-items-center mb-4">
+          <a href="index.html" class="small fw-bold text-primary"><i class="bi bi-arrow-left me-1"></i> Back to Website</a>
+          <div class="d-flex gap-2">
+            <button class="btn-icon-toggle js-theme-toggle" title="Toggle Theme"><i class="bi bi-moon-stars-fill js-theme-icon"></i></button>
+            <button class="btn-icon-toggle js-rtl-toggle" title="Toggle LTR/RTL"><span class="js-rtl-label">LTR</span></button>
+          </div>
+        </div>
+
+        <h3 class="fw-bold text-dark mb-1">Guest Login</h3>
+        <p class="small text-muted mb-4">Sign in to manage your hot air balloon reservations.</p>
+
+        <form action="dashboard.html">
+          <div class="mb-3">
+            <label class="form-label small fw-bold">Email Address</label>
+            <div class="input-group">
+              <span class="input-group-text bg-transparent border-end-0"><i class="bi bi-envelope text-muted"></i></span>
+              <input type="email" class="form-control border-start-0" placeholder="guest@example.com" required value="jordan.blake@example.com">
+            </div>
+          </div>
+
+          <div class="mb-3">
+            <div class="d-flex justify-content-between align-items-center mb-1">
+              <label class="form-label small fw-bold mb-0">Password</label>
+              <a href="#" class="small text-primary">Forgot Password?</a>
+            </div>
+            <div class="input-group">
+              <span class="input-group-text bg-transparent border-end-0"><i class="bi bi-lock text-muted"></i></span>
+              <input type="password" class="form-control border-start-0" placeholder="••••••••" required value="password123">
+            </div>
+          </div>
+
+          <div class="form-check mb-4">
+            <input class="form-check-input" type="checkbox" id="rememberMe" checked>
+            <label class="form-check-label small text-muted" for="rememberMe">Remember my session</label>
+          </div>
+
+          <button type="submit" class="btn-primary-coral w-100 py-2.5 justify-content-center fs-6 mb-3">
+            <i class="bi bi-box-arrow-in-right me-2"></i> Log In to Dashboard
+          </button>
+        </form>
+
+        <div class="text-center small text-muted">
+          Don't have a guest account? <a href="register.html" class="fw-bold text-primary ms-1">Register Now</a>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="assets/js/main.js"></script>
+</body>
+</html>
+
+

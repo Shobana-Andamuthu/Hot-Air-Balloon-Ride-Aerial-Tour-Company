@@ -1,0 +1,507 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light" dir="ltr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>AEROVA - Guest Flight Dashboard</title>
+  <meta name="description" content="AEROVA Guest Dashboard to view upcoming flights, check weather status, download certificates, and view photo albums.">
+
+  <!-- Bootstrap 5 CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+  <!-- Bootstrap Icons -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css" rel="stylesheet">
+  <!-- Master Stylesheet -->
+  <link rel="stylesheet" href="assets/css/style.css">
+  <!-- Favicon / Browser Tab Logo -->
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><defs><linearGradient id='aerovaGrad' x1='0%25' y1='0%25' x2='100%25' y2='100%25'><stop offset='0%25' stop-color='%23E87561'/><stop offset='100%25' stop-color='%235B9BD5'/></linearGradient></defs><circle cx='50' cy='50' r='50' fill='url(%23aerovaGrad)'/><path d='M50 18 C35 18 26 29 26 42 C26 53 35 63 43 69 L43 75 L57 75 L57 69 C65 63 74 53 74 42 C74 29 65 18 50 18 Z' fill='%23ffffff'/><rect x='44' y='78' width='12' height='8' rx='2' fill='%23ffffff'/><line x1='44' y1='73' x2='45' y2='78' stroke='%23ffffff' stroke-width='1.5'/><line x1='56' y1='73' x2='55' y2='78' stroke='%23ffffff' stroke-width='1.5'/></svg>" type="image/svg+xml">
+</head>
+<body>
+
+  <!-- PAGE PRELOADER -->
+  <div id="page-preloader" class="aerova-preloader">
+    <div class="preloader-inner">
+      <div class="preloader-balloon-wrapper">
+        <div class="preloader-ring"></div>
+        <div class="preloader-balloon">
+          <i class="bi bi-balloon-fill"></i>
+        </div>
+      </div>
+      <div class="preloader-brand">AEROVA</div>
+      <div class="preloader-subtext">Preparing Sky Horizon Experience...</div>
+      <div class="preloader-bar">
+        <div class="preloader-progress"></div>
+      </div>
+    </div>
+  </div>
+
+  <!-- DASHBOARD TOP HEADER (Matching Reference Layout) -->
+  <header class="dashboard-header">
+    <div class="container-fluid px-3 px-md-4 px-lg-5">
+      <a class="aerova-brand" href="index.html">
+        <div class="aerova-brand-icon">
+          <i class="bi bi-balloon-fill"></i>
+        </div>
+        <span>AEROVA</span>
+      </a>
+
+      <div class="dashboard-header-actions">
+        <button class="btn-icon-toggle js-theme-toggle" title="Toggle Theme" aria-label="Toggle Theme">
+          <i class="bi bi-moon-stars-fill js-theme-icon"></i>
+        </button>
+        <button class="btn-icon-toggle js-rtl-toggle" title="Toggle RTL" aria-label="Toggle LTR/RTL">
+          <span class="js-rtl-label">LTR</span>
+        </button>
+        <a href="index.html" class="btn-dashboard-back" title="Back to Site" aria-label="Back to Site">
+          <i class="bi bi-arrow-left"></i> <span class="d-none d-md-inline">Back to Site</span>
+        </a>
+        <a href="login.html" class="btn-dashboard-logout" title="Log Out" aria-label="Log Out">
+          <i class="bi bi-box-arrow-right"></i> <span class="d-none d-md-inline">Log Out</span>
+        </a>
+      </div>
+    </div>
+  </header>
+
+  <!-- DASHBOARD BODY WRAPPER -->
+  <div class="dashboard-wrapper">
+    <!-- SIDEBAR NAVIGATION (Desktop Sidebar / Mobile Horizontal Pill Bar matching Reference Image 3) -->
+    <aside class="dashboard-sidebar">
+      <div class="d-none d-xl-flex align-items-center gap-3 p-2.5 mb-3 bg-light-subtle rounded-3 border">
+        <div class="bg-primary text-white rounded-circle fw-bold d-flex align-items-center justify-content-center" style="width: 40px; height: 40px; flex-shrink: 0;">
+          JB
+        </div>
+        <div>
+          <div class="fw-bold text-dark lh-1">Jordan Blake</div>
+          <div class="small text-muted" style="font-size: 0.8rem;">VIP Guest</div>
+        </div>
+      </div>
+
+      <nav class="nav flex-column gap-1" id="dashboardNav">
+        <a class="dashboard-nav-item active" href="#overview"><i class="bi bi-grid-fill"></i> Overview</a>
+        <a class="dashboard-nav-item" href="#book"><i class="bi bi-calendar-plus-fill"></i> Book a Flight</a>
+        <a class="dashboard-nav-item" href="#reservations"><i class="bi bi-ticket-perforated-fill"></i> My Reservations</a>
+        <a class="dashboard-nav-item" href="#weather"><i class="bi bi-cloud-sun-fill"></i> Flight Weather Status</a>
+        <a class="dashboard-nav-item" href="#passengers"><i class="bi bi-people-fill"></i> Passenger Manifest</a>
+        <a class="dashboard-nav-item" href="#certificates"><i class="bi bi-award-fill"></i> Flight Certificates</a>
+        <a class="dashboard-nav-item" href="#photos"><i class="bi bi-camera-reels-fill"></i> Photos & Video</a>
+        <a class="dashboard-nav-item" href="#payments"><i class="bi bi-credit-card-fill"></i> Payments & Invoices</a>
+        <a class="dashboard-nav-item" href="#history"><i class="bi bi-clock-history"></i> Booking History</a>
+        <a class="dashboard-nav-item" href="#profile"><i class="bi bi-person-gear"></i> Profile Settings</a>
+      </nav>
+    </aside>
+
+    <!-- MAIN DASHBOARD CONTENT -->
+    <main class="dashboard-main p-3 p-md-4">
+      
+      <!-- TAB 1: OVERVIEW (ACTIVE) -->
+      <div class="dashboard-tab-content" id="overview">
+        <div class="d-flex justify-content-between align-items-center mb-4">
+          <div class="d-flex align-items-center gap-3">
+            <div class="bg-primary text-white rounded-circle fw-bold d-flex d-xl-none align-items-center justify-content-center" style="width: 46px; height: 46px; flex-shrink: 0; font-size: 1.1rem; box-shadow: 0 4px 12px rgba(91, 155, 213, 0.35);">
+              JB
+            </div>
+            <div>
+              <div class="text-muted small mb-0 lh-1">Welcome back,</div>
+              <h2 class="fw-extrabold text-dark mb-0 fs-3">Jordan Blake</h2>
+            </div>
+          </div>
+          <a href="packages.html" class="btn-primary-coral btn-sm">
+            <i class="bi bi-plus-circle-fill me-1"></i> <span class="d-none d-sm-inline">Book New Flight</span><span class="d-sm-none">Book</span>
+          </a>
+        </div>
+
+        <!-- KEY METRIC CARDS GRID -->
+        <div class="row g-3 mb-4">
+          <div class="col-xl-3 col-md-6">
+            <div class="stat-box text-start border-primary p-3">
+              <div class="small text-muted fw-semibold mb-1">NEXT UPCOMING FLIGHT</div>
+              <div class="fw-bold fs-5 text-dark">Sunrise Horizon Tour</div>
+              <div class="small text-primary fw-bold mt-1"><i class="bi bi-calendar3 me-1"></i> Oct 14, 2026 &bull; 6:15 AM</div>
+            </div>
+          </div>
+
+          <div class="col-xl-3 col-md-6">
+            <div class="stat-box text-start border-success p-3">
+              <div class="small text-muted fw-semibold mb-1">LAUNCH WEATHER STATUS</div>
+              <div class="fw-bold fs-5 text-success"><i class="bi bi-check-circle-fill me-1"></i> Cleared for Launch</div>
+              <div class="small text-muted mt-1">Wind: 4.2 kts &bull; Visibility: 10+ mi</div>
+            </div>
+          </div>
+
+          <div class="col-xl-3 col-md-6">
+            <div class="stat-box text-start p-3">
+              <div class="small text-muted fw-semibold mb-1">PASSENGERS IN MANIFEST</div>
+              <div class="fw-bold fs-5 text-dark">2 Guests</div>
+              <div class="small text-muted mt-1">Jordan Blake & Chloe Bennett</div>
+            </div>
+          </div>
+
+          <div class="col-xl-3 col-md-6">
+            <div class="stat-box text-start border-warning p-3">
+              <div class="small text-muted fw-semibold mb-1">PAYMENT STATUS</div>
+              <div class="fw-bold fs-5 text-dark">$580.00 Paid</div>
+              <div class="small text-success fw-semibold mt-1"><i class="bi bi-shield-check me-1"></i> Confirmed & Invoiced</div>
+            </div>
+          </div>
+        </div>
+
+        <!-- ACTIVE RESERVATION DETAILS CARD -->
+        <div class="card-aerova p-4 mb-4">
+          <div class="d-flex flex-wrap justify-content-between align-items-center mb-3">
+            <div>
+              <span class="badge bg-primary rounded-pill mb-1">CONFIRMED BOOKING #AERO-8842</span>
+              <h3 class="fw-bold fs-4 text-dark mb-0">Sunrise Horizon Escape — Coimbatore Base Launch</h3>
+            </div>
+            <div class="text-lg-end mt-2 mt-lg-0">
+              <span class="weather-badge-success fs-6"><i class="bi bi-balloon-fill"></i> FLIGHT READY</span>
+            </div>
+          </div>
+
+          <div class="row g-4 align-items-center">
+            <div class="col-lg-8">
+              <div class="row g-3">
+                <div class="col-sm-4">
+                  <div class="p-3 bg-light-subtle rounded-3 border">
+                    <div class="small text-muted">Departure Time</div>
+                    <div class="fw-bold text-dark">6:15 AM Dawn</div>
+                  </div>
+                </div>
+                <div class="col-sm-4">
+                  <div class="p-3 bg-light-subtle rounded-3 border">
+                    <div class="small text-muted">Meeting Location</div>
+                    <div class="fw-bold text-dark">Coimbatore Launch Field</div>
+                  </div>
+                </div>
+                <div class="col-sm-4">
+                  <div class="p-3 bg-light-subtle rounded-3 border">
+                    <div class="small text-muted">Assigned Pilot</div>
+                    <div class="fw-bold text-dark">Capt. Arthur Pendelton</div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="col-lg-4 text-lg-end">
+              <a href="weather.html" class="btn btn-outline-primary rounded-pill btn-sm w-100 mb-2">
+                <i class="bi bi-cloud-sun me-1"></i> View Live Weather Radar
+              </a>
+              <button class="btn btn-outline-secondary rounded-pill btn-sm w-100">
+                <i class="bi bi-printer me-1"></i> Print Boarding Pass
+              </button>
+            </div>
+          </div>
+        </div>
+
+        <!-- TWO-COLUMN DASHBOARD WIDGETS -->
+        <div class="row g-4">
+          <div class="col-lg-6">
+            <div class="card-aerova p-4 h-100">
+              <div class="d-flex justify-content-between align-items-center mb-3">
+                <h4 class="fw-bold fs-5 text-dark mb-0"><i class="bi bi-award text-primary me-2"></i> Flight Certificates</h4>
+                <span class="badge bg-secondary rounded-pill">1 Certificate Ready</span>
+              </div>
+              <p class="small text-muted mb-3">Download your official aeronautical flight certificate signed by your captain.</p>
+              <div class="p-3 bg-light-subtle rounded-3 border d-flex flex-column flex-sm-row justify-content-between align-items-sm-center gap-3">
+                <div>
+                  <div class="fw-bold text-dark">Alpine Sky Voyage Certificate</div>
+                  <div class="small text-muted">Signed by Capt. Arthur &bull; Altitude 3,500ft</div>
+                </div>
+                <a href="#" class="btn btn-sm btn-primary-sky rounded-pill px-4 text-nowrap flex-shrink-0"><i class="bi bi-download me-1"></i> PDF Certificate</a>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-lg-6">
+            <div class="card-aerova p-4 h-100">
+              <div class="d-flex justify-content-between align-items-center mb-3">
+                <h4 class="fw-bold fs-5 text-dark mb-0"><i class="bi bi-camera-reels text-primary me-2"></i> Flight Memories & Video</h4>
+                <span class="badge bg-secondary rounded-pill">HD Album Ready</span>
+              </div>
+              <div class="d-flex gap-2 mb-3 mt-auto">
+                <img src="assets/images/hero-index.jpg" alt="Photo 1" class="rounded border flex-fill" style="height: 54px; object-fit: cover; min-width: 0;">
+                <img src="assets/images/hero-home2.jpg" alt="Photo 2" class="rounded border flex-fill" style="height: 54px; object-fit: cover; min-width: 0;">
+                <img src="assets/images/hero-packages.jpg" alt="Photo 3" class="rounded border flex-fill" style="height: 54px; object-fit: cover; min-width: 0;">
+              </div>
+              <a href="gallery.html" class="btn btn-outline-primary rounded-pill w-100 py-2 d-flex align-items-center justify-content-center text-decoration-none fw-bold" style="font-size: 0.88rem;">
+                <i class="bi bi-download me-2"></i> Download All (24 Files)
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- TAB 2: BOOK A FLIGHT -->
+      <div class="dashboard-tab-content d-none" id="book">
+        <h2 class="fw-bold text-dark mb-2">Book a Flight</h2>
+        <p class="text-muted small mb-4">Select your preferred hot air balloon experience, dates, and flight guests.</p>
+        <div class="card-aerova p-4">
+          <form>
+            <div class="row g-3">
+              <div class="col-md-6">
+                <label class="form-label fw-semibold">Package Type</label>
+                <select class="form-select rounded-3">
+                  <option selected>Sunrise Horizon Tour ($290 / person)</option>
+                  <option>Sunset Romance Escape ($380 / couple)</option>
+                  <option>Private VIP Sky Charter ($850 / private group)</option>
+                </select>
+              </div>
+              <div class="col-md-6">
+                <label class="form-label fw-semibold">Flight Date</label>
+                <input type="date" class="form-control rounded-3" value="2026-10-15">
+              </div>
+              <div class="col-md-6">
+                <label class="form-label fw-semibold">Number of Passengers</label>
+                <input type="number" class="form-control rounded-3" value="2" min="1" max="12">
+              </div>
+              <div class="col-md-6">
+                <label class="form-label fw-semibold">Launch Field</label>
+                <input type="text" class="form-control rounded-3" value="Avinashi Road, Coimbatore Base Field" readonly>
+              </div>
+              <div class="col-12 mt-4 text-end">
+                <button type="button" class="btn-primary-coral px-5">Confirm Booking & Pay</button>
+              </div>
+            </div>
+          </form>
+        </div>
+      </div>
+
+      <!-- TAB 3: MY RESERVATIONS -->
+      <div class="dashboard-tab-content d-none" id="reservations">
+        <h2 class="fw-bold text-dark mb-2">My Reservations</h2>
+        <p class="text-muted small mb-4">View and manage active, upcoming, and completed flight bookings.</p>
+        <div class="card-aerova p-0 overflow-hidden border shadow-sm rounded-4">
+          <div class="table-responsive">
+            <table class="table table-hover align-middle mb-0 aerova-matrix-table text-nowrap">
+              <thead class="table-light">
+                <tr>
+                  <th scope="col" class="py-3 px-3">Booking ID</th>
+                  <th scope="col" class="py-3 px-3">Package Name</th>
+                  <th scope="col" class="py-3 px-3">Flight Date & Time</th>
+                  <th scope="col" class="py-3 px-3">Passengers</th>
+                  <th scope="col" class="py-3 px-3">Status</th>
+                  <th scope="col" class="py-3 px-3 text-end">Actions</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td class="fw-bold text-primary px-3">#AERO-8842</td>
+                  <td class="fw-semibold px-3"><i class="bi bi-balloon-fill text-primary me-1"></i> Sunrise Horizon Tour</td>
+                  <td class="px-3">
+                    <span class="aerova-date-pill"><i class="bi bi-calendar-check text-primary"></i> Oct 14, 2026 &bull; 6:15 AM</span>
+                  </td>
+                  <td class="px-3"><i class="bi bi-people me-1 text-muted"></i> 2 Guests</td>
+                  <td class="px-3"><span class="badge bg-success-subtle text-success py-2 px-3 fw-bold"><i class="bi bi-check-circle-fill me-1"></i> Confirmed</span></td>
+                  <td class="px-3 text-end"><a href="weather.html" class="btn btn-sm btn-outline-primary rounded-pill px-3">Check Weather</a></td>
+                </tr>
+                <tr>
+                  <td class="fw-bold text-primary px-3">#AERO-7612</td>
+                  <td class="fw-semibold px-3"><i class="bi bi-balloon-fill text-secondary me-1"></i> Sunset Romance Escape</td>
+                  <td class="px-3">
+                    <span class="aerova-date-pill"><i class="bi bi-calendar-check text-secondary"></i> May 20, 2026 &bull; 5:45 PM</span>
+                  </td>
+                  <td class="px-3"><i class="bi bi-people me-1 text-muted"></i> 2 Guests</td>
+                  <td class="px-3"><span class="badge bg-secondary-subtle text-secondary py-2 px-3 fw-bold"><i class="bi bi-flag-fill me-1"></i> Completed</span></td>
+                  <td class="px-3 text-end"><a href="gallery.html" class="btn btn-sm btn-outline-secondary rounded-pill px-3">View Photos</a></td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+      </div>
+
+      <!-- TAB 4: FLIGHT WEATHER STATUS -->
+      <div class="dashboard-tab-content d-none" id="weather">
+        <h2 class="fw-bold text-dark mb-2">Flight Weather Status</h2>
+        <p class="text-muted small mb-4">Real-time flight meteorological updates from Coimbatore dispatch desk.</p>
+        <div class="card-aerova p-4">
+          <div class="row g-4 align-items-center">
+            <div class="col-lg-6">
+              <span class="badge bg-success mb-2 px-3 py-2 fs-6"><i class="bi bi-check-circle-fill me-1"></i> FLIGHT CLEARED</span>
+              <h3 class="fw-bold text-dark">Optimal Sunrise Conditions</h3>
+              <p class="text-muted small mb-0">Surface wind speeds are well below the 10-knot safety threshold. Ideal thermal stability predicted for morning flight operations.</p>
+            </div>
+            <div class="col-lg-6">
+              <div class="p-3 bg-light-subtle rounded-3 border">
+                <div class="d-flex justify-content-between align-items-center py-2 border-bottom">
+                  <span class="text-muted small fw-semibold"><i class="bi bi-wind me-1 text-primary"></i> Wind Speed</span>
+                  <span class="fw-bold text-dark text-end">4.2 knots (East)</span>
+                </div>
+                <div class="d-flex justify-content-between align-items-center py-2 border-bottom">
+                  <span class="text-muted small fw-semibold"><i class="bi bi-eye me-1 text-primary"></i> Visibility</span>
+                  <span class="fw-bold text-dark text-end">10+ Miles</span>
+                </div>
+                <div class="d-flex justify-content-between align-items-center py-2">
+                  <span class="text-muted small fw-semibold"><i class="bi bi-clouds me-1 text-primary"></i> Cloud Ceiling</span>
+                  <span class="fw-bold text-dark text-end">Clear &bull; 5,000ft</span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- TAB 5: PASSENGER MANIFEST -->
+      <div class="dashboard-tab-content d-none" id="passengers">
+        <h2 class="fw-bold text-dark mb-2">Passenger Manifest</h2>
+        <p class="text-muted small mb-4">Declare weight and passenger information required by aviation safety guidelines.</p>
+        <div class="card-aerova p-4">
+          <div class="row g-4">
+            <div class="col-md-6">
+              <div class="p-3 border rounded-3 bg-light-subtle">
+                <h5 class="fw-bold mb-1">Passenger 1 (Primary)</h5>
+                <p class="small text-muted mb-2">Jordan Blake &bull; Male</p>
+                <div class="small">Dietary Preference: Champagne + Morning Pastries</div>
+              </div>
+            </div>
+            <div class="col-md-6">
+              <div class="p-3 border rounded-3 bg-light-subtle">
+                <h5 class="fw-bold mb-1">Passenger 2 (Guest)</h5>
+                <p class="small text-muted mb-2">Chloe Bennett &bull; Female</p>
+                <div class="small">Dietary Preference: Sparkling Cider + Gluten Free</div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- TAB 6: FLIGHT CERTIFICATES -->
+      <div class="dashboard-tab-content d-none" id="certificates">
+        <h2 class="fw-bold text-dark mb-2">Flight Certificates</h2>
+        <p class="text-muted small mb-4">Official commemorative certificates signed by commercial master pilots.</p>
+        <div class="card-aerova p-4">
+          <div class="d-flex flex-column flex-sm-row justify-content-between align-items-sm-center gap-3 p-3 border rounded-3 bg-light-subtle">
+            <div>
+              <h5 class="fw-bold text-dark mb-1">Alpine Sky Voyage Certificate</h5>
+              <p class="small text-muted mb-0">Signed by Capt. Arthur Pendelton &bull; Oct 14, 2026</p>
+            </div>
+            <button class="btn btn-primary-sky rounded-pill px-4 text-nowrap flex-shrink-0"><i class="bi bi-file-earmark-pdf-fill me-1"></i> Download PDF</button>
+          </div>
+        </div>
+      </div>
+
+      <!-- TAB 7: PHOTOS & VIDEO -->
+      <div class="dashboard-tab-content d-none" id="photos">
+        <h2 class="fw-bold text-dark mb-2">Photos & Video Album</h2>
+        <p class="text-muted small mb-4">Complimentary 4K photo and video footage recorded during your flight.</p>
+        <div class="card-aerova p-4">
+          <div class="row g-3">
+            <div class="col-md-4">
+              <img src="assets/images/hero-experiences.jpg" class="img-fluid rounded-3 border w-100 object-fit-cover" style="height: 180px;" alt="Photo 1">
+            </div>
+            <div class="col-md-4">
+              <img src="assets/images/hero-gallery.jpg" class="img-fluid rounded-3 border w-100 object-fit-cover" style="height: 180px;" alt="Photo 2">
+            </div>
+            <div class="col-md-4">
+              <img src="assets/images/hero-about.jpg" class="img-fluid rounded-3 border w-100 object-fit-cover" style="height: 180px;" alt="Photo 3">
+            </div>
+          </div>
+          <div class="mt-4 text-end">
+            <a href="gallery.html" class="btn btn-outline-primary rounded-pill px-4">View All Gallery Photos</a>
+          </div>
+        </div>
+      </div>
+
+      <!-- TAB 8: PAYMENTS & INVOICES -->
+      <div class="dashboard-tab-content d-none" id="payments">
+        <h2 class="fw-bold text-dark mb-2">Payments & Invoices</h2>
+        <p class="text-muted small mb-4">View digital receipts, invoices, and payment receipts.</p>
+        <div class="card-aerova p-0 overflow-hidden border shadow-sm rounded-4">
+          <div class="table-responsive">
+            <table class="table table-hover align-middle mb-0 aerova-matrix-table text-nowrap">
+              <thead class="table-light">
+                <tr>
+                  <th scope="col" class="py-3 px-3">Invoice ID</th>
+                  <th scope="col" class="py-3 px-3">Date</th>
+                  <th scope="col" class="py-3 px-3">Amount</th>
+                  <th scope="col" class="py-3 px-3">Status</th>
+                  <th scope="col" class="py-3 px-3 text-end">Receipt</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td class="fw-bold text-primary px-3">#INV-9021</td>
+                  <td class="px-3"><span class="aerova-date-pill"><i class="bi bi-calendar3 text-primary"></i> Oct 10, 2026</span></td>
+                  <td class="fw-bold text-dark px-3">$580.00</td>
+                  <td class="px-3"><span class="badge bg-success-subtle text-success py-2 px-3 fw-bold"><i class="bi bi-check-circle-fill me-1"></i> Paid</span></td>
+                  <td class="px-3 text-end"><a href="#" class="btn btn-sm btn-outline-primary rounded-pill px-3"><i class="bi bi-file-earmark-pdf me-1"></i> Download PDF</a></td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+      </div>
+
+      <!-- TAB 9: BOOKING HISTORY -->
+      <div class="dashboard-tab-content d-none" id="history">
+        <h2 class="fw-bold text-dark mb-2">Booking History</h2>
+        <p class="text-muted small mb-4">Your past hot air ballooning journeys with AEROVA.</p>
+        <div class="card-aerova p-4">
+          <div class="p-3 border rounded-3 bg-light-subtle mb-3">
+            <h5 class="fw-bold mb-1">Sunset Romance Escape</h5>
+            <p class="small text-muted mb-0">Flown on May 20, 2026 &bull; Pilot: Capt. Elena Rostova</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- TAB 10: PROFILE SETTINGS -->
+      <div class="dashboard-tab-content d-none" id="profile">
+        <h2 class="fw-bold text-dark mb-2">Profile Settings</h2>
+        <p class="text-muted small mb-4">Manage your contact details and flight notification preferences.</p>
+        <div class="card-aerova p-4">
+          <form>
+            <div class="row g-3">
+              <div class="col-md-6">
+                <label class="form-label fw-semibold">Full Name</label>
+                <input type="text" class="form-control rounded-3" value="Jordan Blake">
+              </div>
+              <div class="col-md-6">
+                <label class="form-label fw-semibold">Email Address</label>
+                <input type="email" class="form-control rounded-3" value="jordan.blake@example.com">
+              </div>
+              <div class="col-md-6">
+                <label class="form-label fw-semibold">Phone Number</label>
+                <input type="tel" class="form-control rounded-3" value="+91 98765 43210">
+              </div>
+              <div class="col-12 mt-4 text-end">
+                <button type="button" class="btn-primary-coral px-4">Save Profile Changes</button>
+              </div>
+            </div>
+          </form>
+        </div>
+      </div>
+
+    </main>
+  </div>
+
+  <!-- Bootstrap 5 JS Bundle -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/bootstrap.bundle.min.js"></script>
+  <!-- Master Script -->
+  <script src="assets/js/main.js"></script>
+  <script>
+    // Tab switching script for Dashboard
+    document.addEventListener('DOMContentLoaded', () => {
+      const navItems = document.querySelectorAll('#dashboardNav .dashboard-nav-item');
+      const tabContents = document.querySelectorAll('.dashboard-tab-content');
+
+      navItems.forEach(item => {
+        item.addEventListener('click', (e) => {
+          e.preventDefault();
+          const targetId = item.getAttribute('href').replace('#', '');
+
+          navItems.forEach(nav => nav.classList.remove('active'));
+          item.classList.add('active');
+
+          tabContents.forEach(content => {
+            if (content.id === targetId) {
+              content.classList.remove('d-none');
+            } else {
+              content.classList.add('d-none');
+            }
+          });
+        });
+      });
+    });
+  </script>
+</body>
+</html>
+
+

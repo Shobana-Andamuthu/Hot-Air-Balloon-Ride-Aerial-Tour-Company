@@ -1,0 +1,647 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light" dir="ltr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>AEROVA - Flights & Packages</title>
+  <meta name="description" content="Explore premier hot air balloon flight packages. Sunrise tours, private charters, and romantic sky escapes with certified pilots.">
+
+  <!-- Bootstrap 5 CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+  <!-- Bootstrap Icons -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css" rel="stylesheet">
+  <!-- Master Stylesheet -->
+  <link rel="stylesheet" href="assets/css/style.css">
+  <!-- Favicon / Browser Tab Logo -->
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><defs><linearGradient id='aerovaGrad' x1='0%25' y1='0%25' x2='100%25' y2='100%25'><stop offset='0%25' stop-color='%23E87561'/><stop offset='100%25' stop-color='%235B9BD5'/></linearGradient></defs><circle cx='50' cy='50' r='50' fill='url(%23aerovaGrad)'/><path d='M50 18 C35 18 26 29 26 42 C26 53 35 63 43 69 L43 75 L57 75 L57 69 C65 63 74 53 74 42 C74 29 65 18 50 18 Z' fill='%23ffffff'/><rect x='44' y='78' width='12' height='8' rx='2' fill='%23ffffff'/><line x1='44' y1='73' x2='45' y2='78' stroke='%23ffffff' stroke-width='1.5'/><line x1='56' y1='73' x2='55' y2='78' stroke='%23ffffff' stroke-width='1.5'/></svg>" type="image/svg+xml">
+</head>
+<body>
+
+  <!-- PAGE PRELOADER -->
+  <div id="page-preloader" class="aerova-preloader">
+    <div class="preloader-inner">
+      <div class="preloader-balloon-wrapper">
+        <div class="preloader-ring"></div>
+        <div class="preloader-balloon">
+          <i class="bi bi-balloon-fill"></i>
+        </div>
+      </div>
+      <div class="preloader-brand">AEROVA</div>
+      <div class="preloader-subtext">Preparing Sky Horizon Experience...</div>
+      <div class="preloader-bar">
+        <div class="preloader-progress"></div>
+      </div>
+    </div>
+  </div>
+
+  <!-- HEADER -->
+  <header class="aerova-header">
+    <div class="container">
+      <nav class="navbar navbar-expand-lg navbar-light p-0">
+        <a class="aerova-brand navbar-brand" href="index.html">
+          <div class="aerova-brand-icon">
+            <i class="bi bi-balloon-fill"></i>
+          </div>
+          <span>AEROVA</span>
+        </a>
+
+        <button class="navbar-toggler collapsed border-0 shadow-none p-2" type="button" data-bs-toggle="collapse" data-bs-target="#aerovaNavbar" aria-controls="aerovaNavbar" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <div class="collapse navbar-collapse" id="aerovaNavbar">
+          <ul class="navbar-nav mx-auto mb-2 mb-lg-0 gap-lg-1">
+            <li class="nav-item dropdown">
+              <a class="aerova-nav-link dropdown-toggle" href="#" id="homeDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                Home
+              </a>
+              <ul class="dropdown-menu border-0 shadow-lg rounded-3" aria-labelledby="homeDropdown">
+                <li><a class="dropdown-item py-2 fw-semibold" href="index.html"><i class="bi bi-house-door-fill text-primary me-2"></i> Home 1 (Cinematic)</a></li>
+                <li><a class="dropdown-item py-2 fw-semibold" href="home-2.html"><i class="bi bi-balloon-fill text-secondary me-2"></i> Home 2 (Bento & Split)</a></li>
+              </ul>
+            </li>
+            <li class="nav-item"><a class="aerova-nav-link active" href="packages.html">Packages</a></li>
+            <li class="nav-item"><a class="aerova-nav-link" href="experiences.html">Experiences</a></li>
+            <li class="nav-item"><a class="aerova-nav-link" href="weather.html">Safety</a></li>
+            <li class="nav-item"><a class="aerova-nav-link" href="gallery.html">Gallery</a></li>
+            <li class="nav-item"><a class="aerova-nav-link" href="about.html">About</a></li>
+            <li class="nav-item"><a class="aerova-nav-link" href="contact.html">Contact</a></li>
+            <li class="nav-item"><a class="aerova-nav-link" href="dashboard.html">Dashboard</a></li>
+          </ul>
+
+          <div class="header-actions">
+            <button class="btn-icon-toggle js-theme-toggle" title="Toggle Theme" aria-label="Toggle Theme">
+              <i class="bi bi-moon-stars-fill js-theme-icon"></i>
+            </button>
+            <button class="btn-icon-toggle js-rtl-toggle" title="Toggle RTL" aria-label="Toggle LTR/RTL">
+              <span class="js-rtl-label">LTR</span>
+            </button>
+            <a href="login.html" class="btn-primary-coral">
+              <i class="bi bi-person-circle"></i> Login
+            </a>
+          </div>
+        </div>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <!-- UNIFORM HEIGHT INNER HERO -->
+    <section class="hero-inner" style="background-image: url('assets/images/sunset-beach-couple.jpg');">
+      <div class="hero-overlay"></div>
+      <div class="hero-inner-content">
+        <span class="badge-eyebrow"><i class="bi bi-journal-bookmark-fill me-1"></i> FLIGHT CATALOG</span>
+        <h1 class="hero-title">Flights & Packages</h1>
+        <p class="hero-subtitle">Choose from sunrise valley tours, private sky charters, and custom milestone celebration flights.</p>
+        <ul class="breadcrumb-custom">
+          <li><a href="index.html">Home</a></li>
+          <li>/</li>
+          <li class="text-white">Flights & Packages</li>
+        </ul>
+      </div>
+    </section>
+
+    <!-- CONTENT SECTION 1: INTERACTIVE CATEGORY FILTER BAR & TOUR CATALOG -->
+    <section class="section-padding pt-4">
+      <div class="container">
+        <div class="section-header text-center">
+          <span class="badge-eyebrow badge-eyebrow-dark">EXPLORE SELECTION</span>
+          <h2 class="section-title">Select Your Flight Experience</h2>
+          <p class="section-desc">Filter by flight style, duration, or group size to find your ideal hot air balloon journey.</p>
+        </div>
+
+        <!-- Filter Controls -->
+        <div class="d-flex flex-wrap justify-content-center gap-2 mb-5">
+          <button class="filter-btn-aerova active js-filter-btn" data-filter="all">All Packages</button>
+          <button class="filter-btn-aerova js-filter-btn" data-filter="sunrise">Sunrise Flights</button>
+          <button class="filter-btn-aerova js-filter-btn" data-filter="private">Private VIP</button>
+          <button class="filter-btn-aerova js-filter-btn" data-filter="group">Group & Family</button>
+        </div>
+
+        <!-- Cards Container (9 Cards Across 3 Rows) -->
+        <div class="row g-4">
+          <!-- Card 1 -->
+          <div class="col-xl-4 col-lg-6 col-md-6 js-filter-item" data-category="sunrise">
+            <div class="card-aerova">
+              <div class="card-img-wrapper">
+                <img src="assets/images/hero-index.jpg" alt="Sunrise Valley Explorer">
+                <span class="card-badge-top"><i class="bi bi-brightness-high me-1"></i> Sunrise</span>
+                <span class="card-price-tag">$290</span>
+              </div>
+              <div class="card-body-aerova">
+                <h3 class="card-title-aerova">Sunrise Valley Explorer</h3>
+                <div class="card-meta-list">
+                  <span class="card-meta-item"><i class="bi bi-clock"></i> 60 Mins</span>
+                  <span class="card-meta-item"><i class="bi bi-people"></i> Max 6 Guests</span>
+                </div>
+                <p class="card-desc-aerova">Gently float above fog-draped pine forests as golden dawn light breaks across mountain ridges.</p>
+                <div class="card-footer-aerova">
+                  <span class="small fw-semibold text-primary"><i class="bi bi-cup-hot me-1"></i> Morning Pastries</span>
+                  <a href="dashboard.html" class="btn-primary-coral btn-sm">Reserve <i class="bi bi-arrow-right"></i></a>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Card 2 -->
+          <div class="col-xl-4 col-lg-6 col-md-6 js-filter-item" data-category="private">
+            <div class="card-aerova">
+              <div class="card-img-wrapper">
+                <img src="assets/images/hero-home2.jpg" alt="Private Celestial Charter">
+                <span class="card-badge-top"><i class="bi bi-gem me-1"></i> VIP Charter</span>
+                <span class="card-price-tag">$680</span>
+              </div>
+              <div class="card-body-aerova">
+                <h3 class="card-title-aerova">Private Celestial Charter</h3>
+                <div class="card-meta-list">
+                  <span class="card-meta-item"><i class="bi bi-clock"></i> 90 Mins</span>
+                  <span class="card-meta-item"><i class="bi bi-person-check"></i> Private Duo</span>
+                </div>
+                <p class="card-desc-aerova">Exclusive balloon basket charter with custom launch route, Moët champagne, and private chauffeur.</p>
+                <div class="card-footer-aerova">
+                  <span class="small fw-semibold text-primary"><i class="bi bi-car-front me-1"></i> Chauffeur Pick-up</span>
+                  <a href="dashboard.html" class="btn-primary-coral btn-sm">Reserve <i class="bi bi-arrow-right"></i></a>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Card 3 -->
+          <div class="col-xl-4 col-lg-6 col-md-6 js-filter-item" data-category="group">
+            <div class="card-aerova">
+              <div class="card-img-wrapper">
+                <img src="assets/images/hero-packages.jpg" alt="Coastal Sky Adventure">
+                <span class="card-badge-top"><i class="bi bi-people me-1"></i> Group</span>
+                <span class="card-price-tag">$520</span>
+              </div>
+              <div class="card-body-aerova">
+                <h3 class="card-title-aerova">Coastal Sky Adventure</h3>
+                <div class="card-meta-list">
+                  <span class="card-meta-item"><i class="bi bi-clock"></i> 75 Mins</span>
+                  <span class="card-meta-item"><i class="bi bi-balloon"></i> 4–8 Guests</span>
+                </div>
+                <p class="card-desc-aerova">Ideal for families and groups. Panoramic views of coastal mountain chains and river winding below.</p>
+                <div class="card-footer-aerova">
+                  <span class="small fw-semibold text-primary"><i class="bi bi-camera me-1"></i> HD Photo Package</span>
+                  <a href="dashboard.html" class="btn-primary-coral btn-sm">Reserve <i class="bi bi-arrow-right"></i></a>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Card 4 (ROW 2) -->
+          <div class="col-xl-4 col-lg-6 col-md-6 js-filter-item" data-category="sunrise">
+            <div class="card-aerova">
+              <div class="card-img-wrapper">
+                <img src="assets/images/hero-experiences.jpg" alt="Alpine Highline Expedition">
+                <span class="card-badge-top"><i class="bi bi-brightness-high me-1"></i> Sunrise</span>
+                <span class="card-price-tag">$380</span>
+              </div>
+              <div class="card-body-aerova">
+                <h3 class="card-title-aerova">Alpine Highline Expedition</h3>
+                <div class="card-meta-list">
+                  <span class="card-meta-item"><i class="bi bi-clock"></i> 75 Mins</span>
+                  <span class="card-meta-item"><i class="bi bi-people"></i> 4–6 Guests</span>
+                </div>
+                <p class="card-desc-aerova">High altitude flight over snowy alpine crags and glacial valleys with hot farm cider.</p>
+                <div class="card-footer-aerova">
+                  <span class="small fw-semibold text-primary"><i class="bi bi-egg-fried me-1"></i> Farmhouse Breakfast</span>
+                  <a href="dashboard.html" class="btn-primary-coral btn-sm">Reserve <i class="bi bi-arrow-right"></i></a>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Card 5 (ROW 2) -->
+          <div class="col-xl-4 col-lg-6 col-md-6 js-filter-item" data-category="private">
+            <div class="card-aerova">
+              <div class="card-img-wrapper">
+                <img src="assets/images/hero-gallery.jpg" alt="Sunset Romance Suite">
+                <span class="card-badge-top"><i class="bi bi-heart-fill me-1"></i> Private Duo</span>
+                <span class="card-price-tag">$480</span>
+              </div>
+              <div class="card-body-aerova">
+                <h3 class="card-title-aerova">Sunset Romance Suite</h3>
+                <div class="card-meta-list">
+                  <span class="card-meta-item"><i class="bi bi-clock"></i> 75 Mins</span>
+                  <span class="card-meta-item"><i class="bi bi-person-heart"></i> Couple Duo</span>
+                </div>
+                <p class="card-desc-aerova">Golden hour twilight flight over autumn forest foliage paired with champagne hamper.</p>
+                <div class="card-footer-aerova">
+                  <span class="small fw-semibold text-primary"><i class="bi bi-glass-flute me-1"></i> Moët Champagne</span>
+                  <a href="dashboard.html" class="btn-primary-coral btn-sm">Reserve <i class="bi bi-arrow-right"></i></a>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Card 6 (ROW 2) -->
+          <div class="col-xl-4 col-lg-6 col-md-6 js-filter-item" data-category="group">
+            <div class="card-aerova">
+              <div class="card-img-wrapper">
+                <img src="assets/images/hero-about.jpg" alt="Family Cloud Cruiser">
+                <span class="card-badge-top"><i class="bi bi-people-fill me-1"></i> Family</span>
+                <span class="card-price-tag">$590</span>
+              </div>
+              <div class="card-body-aerova">
+                <h3 class="card-title-aerova">Family Cloud Cruiser</h3>
+                <div class="card-meta-list">
+                  <span class="card-meta-item"><i class="bi bi-clock"></i> 60 Mins</span>
+                  <span class="card-meta-item"><i class="bi bi-suit-heart"></i> 4–6 Guests</span>
+                </div>
+                <p class="card-desc-aerova">A family favorite journey. Gentle lift-off with souvenir photo pack & flight certificates.</p>
+                <div class="card-footer-aerova">
+                  <span class="small fw-semibold text-primary"><i class="bi bi-camera-fill me-1"></i> Photos Included</span>
+                  <a href="dashboard.html" class="btn-primary-coral btn-sm">Reserve <i class="bi bi-arrow-right"></i></a>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Card 7 (ROW 3) -->
+          <div class="col-xl-4 col-lg-6 col-md-6 js-filter-item" data-category="sunrise">
+            <div class="card-aerova">
+              <div class="card-img-wrapper">
+                <img src="assets/images/hero-weather.jpg" alt="Lakeside Serenity Tour">
+                <span class="card-badge-top"><i class="bi bi-brightness-high me-1"></i> Sunrise</span>
+                <span class="card-price-tag">$320</span>
+              </div>
+              <div class="card-body-aerova">
+                <h3 class="card-title-aerova">Lakeside Serenity Tour</h3>
+                <div class="card-meta-list">
+                  <span class="card-meta-item"><i class="bi bi-clock"></i> 65 Mins</span>
+                  <span class="card-meta-item"><i class="bi bi-people"></i> Max 6 Guests</span>
+                </div>
+                <p class="card-desc-aerova">Drift over crystal mountain lake reflections as early morning mist rises off the water.</p>
+                <div class="card-footer-aerova">
+                  <span class="small fw-semibold text-primary"><i class="bi bi-award me-1"></i> Signed Certificate</span>
+                  <a href="dashboard.html" class="btn-primary-coral btn-sm">Reserve <i class="bi bi-arrow-right"></i></a>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Card 8 (ROW 3) -->
+          <div class="col-xl-4 col-lg-6 col-md-6 js-filter-item" data-category="private">
+            <div class="card-aerova">
+              <div class="card-img-wrapper">
+                <img src="assets/images/hero-contact.jpg" alt="Celebration Sky VIP">
+                <span class="card-badge-top"><i class="bi bi-gem me-1"></i> VIP Charter</span>
+                <span class="card-price-tag">$750</span>
+              </div>
+              <div class="card-body-aerova">
+                <h3 class="card-title-aerova">Celebration Sky VIP</h3>
+                <div class="card-meta-list">
+                  <span class="card-meta-item"><i class="bi bi-clock"></i> 90 Mins</span>
+                  <span class="card-meta-item"><i class="bi bi-balloon"></i> Private Basket</span>
+                </div>
+                <p class="card-desc-aerova">Ultimate luxury balloon charter with custom ground banner, drone video, and champagne suite.</p>
+                <div class="card-footer-aerova">
+                  <span class="small fw-semibold text-primary"><i class="bi bi-car-front me-1"></i> Chauffeur Pick-up</span>
+                  <a href="dashboard.html" class="btn-primary-coral btn-sm">Reserve <i class="bi bi-arrow-right"></i></a>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Card 9 (ROW 3) -->
+          <div class="col-xl-4 col-lg-6 col-md-6 js-filter-item" data-category="group">
+            <div class="card-aerova">
+              <div class="card-img-wrapper">
+                <img src="assets/images/pkg-sunrise-flight.jpg" alt="Autumn Ridge Flight">
+                <span class="card-badge-top"><i class="bi bi-people me-1"></i> Group</span>
+                <span class="card-price-tag">$410</span>
+              </div>
+              <div class="card-body-aerova">
+                <h3 class="card-title-aerova">Autumn Ridge Flight</h3>
+                <div class="card-meta-list">
+                  <span class="card-meta-item"><i class="bi bi-clock"></i> 70 Mins</span>
+                  <span class="card-meta-item"><i class="bi bi-person-lines-fill"></i> 4–8 Guests</span>
+                </div>
+                <p class="card-desc-aerova">High altitude group journey offering vibrant autumn canopy views and GoPro video clips.</p>
+                <div class="card-footer-aerova">
+                  <span class="small fw-semibold text-primary"><i class="bi bi-camera-reels me-1"></i> GoPro Footage</span>
+                  <a href="dashboard.html" class="btn-primary-coral btn-sm">Reserve <i class="bi bi-arrow-right"></i></a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- CONTENT SECTION 2: PACKAGE COMPARISON & ALTITUDE MATRIX -->
+    <section class="section-padding bg-light-subtle border-top border-bottom">
+      <div class="container">
+        <div class="section-header text-center">
+          <span class="badge-eyebrow badge-eyebrow-dark">FEATURE COMPARISON</span>
+          <h2 class="section-title">Package Inclusions Matrix</h2>
+          <p class="section-desc">Detailed overview of flight duration, altitude ceilings, and hospitality services included in every tier.</p>
+        </div>
+
+        <div class="table-responsive bg-white rounded-4 shadow-sm border p-3">
+          <table class="table table-hover align-middle mb-0 aerova-matrix-table">
+            <thead class="table-light">
+              <tr>
+                <th scope="col">Package Name</th>
+                <th scope="col">Air Time</th>
+                <th scope="col">Peak Altitude</th>
+                <th scope="col">Group Capacity</th>
+                <th scope="col">Champagne Toast</th>
+                <th scope="col">Photo Album</th>
+                <th scope="col">Starting Price</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td class="fw-bold"><i class="bi bi-balloon text-primary me-2"></i> Sunrise Valley Explorer</td>
+                <td>60 Minutes</td>
+                <td>2,500 Feet</td>
+                <td>6 Guests</td>
+                <td><i class="bi bi-check-circle-fill text-success"></i> Included</td>
+                <td>Digital Copy</td>
+                <td class="fw-bold text-primary">$290</td>
+              </tr>
+              <tr>
+                <td class="fw-bold"><i class="bi bi-balloon-fill text-primary me-2"></i> Private Celestial Charter</td>
+                <td>90 Minutes</td>
+                <td>3,500 Feet</td>
+                <td>Private Duo</td>
+                <td><i class="bi bi-check-circle-fill text-success"></i> Vintage Moët</td>
+                <td>HD Print & USB</td>
+                <td class="fw-bold text-primary">$680</td>
+              </tr>
+              <tr>
+                <td class="fw-bold"><i class="bi bi-balloon text-primary me-2"></i> Coastal Sky Adventure</td>
+                <td>75 Minutes</td>
+                <td>3,000 Feet</td>
+                <td>4–8 Guests</td>
+                <td><i class="bi bi-check-circle-fill text-success"></i> Included</td>
+                <td>HD Digital Album</td>
+                <td class="fw-bold text-primary">$520</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </section>
+
+    <!-- CONTENT SECTION 3: PACKAGE INCLUSIONS & LUXURY PERKS BENTO -->
+    <section class="section-padding">
+      <div class="container">
+        <div class="section-header text-center">
+          <span class="badge-eyebrow badge-eyebrow-dark">STANDARD ELEVATION</span>
+          <h2 class="section-title">Every Flight Includes</h2>
+          <p class="section-desc">Uncompromising safety, comfort, and celebration with every booking.</p>
+        </div>
+
+        <div class="row g-4">
+          <div class="col-lg-6">
+            <div class="card-horizontal-aerova">
+              <div class="card-horizontal-img">
+                <img src="assets/images/pkg-private-odyssey.jpg" alt="Master Pilots">
+              </div>
+              <div class="card-horizontal-content">
+                <h4 class="fw-bold mb-2">FAA Master Certified Pilots</h4>
+                <p class="text-muted small mb-3">Our chief pilots hold over 25 years and 15,000 combined flight hours in high-altitude ballooning.</p>
+                <div class="small fw-semibold text-primary"><i class="bi bi-shield-check me-1"></i> 100% Safety Standard</div>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-lg-6">
+            <div class="card-horizontal-aerova">
+              <div class="card-horizontal-img">
+                <img src="assets/images/pkg-family-adventure.jpg" alt="Champagne Toast">
+              </div>
+              <div class="card-horizontal-content">
+                <h4 class="fw-bold mb-2">Traditional Touchdown Toast</h4>
+                <p class="text-muted small mb-3">Savor champagne, sparkling cider, and fresh morning pastries in celebration of a successful landing.</p>
+                <div class="small fw-semibold text-primary"><i class="bi bi-award me-1"></i> Signed Certificate</div>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-lg-6">
+            <div class="card-horizontal-aerova">
+              <div class="card-horizontal-img">
+                <img src="assets/images/pkg-classic-valley.jpg" alt="Weather Guarantee">
+              </div>
+              <div class="card-horizontal-content">
+                <h4 class="fw-bold mb-2">Pre-Flight Weather Guarantee</h4>
+                <p class="text-muted small mb-3">Instant re-booking flexibility or complete refund protection if wind conditions exceed safe parameters.</p>
+                <div class="small fw-semibold text-primary"><i class="bi bi-cloud-sun me-1"></i> Zero Cancellation Risk</div>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-lg-6">
+            <div class="card-horizontal-aerova">
+              <div class="card-horizontal-img">
+                <img src="assets/images/sunrise-explorer.png" alt="HD Photos">
+              </div>
+              <div class="card-horizontal-content">
+                <h4 class="fw-bold mb-2">Complimentary HD Photo Package</h4>
+                <p class="text-muted small mb-3">Professional high-resolution inflight portraits captured by automated rim-mounted cameras.</p>
+                <div class="small fw-semibold text-primary"><i class="bi bi-camera me-1"></i> Instant Digital Delivery</div>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-lg-6">
+            <div class="card-horizontal-aerova">
+              <div class="card-horizontal-img">
+                <img src="assets/images/misty-forest-canopy.jpg" alt="Launch Lounge">
+              </div>
+              <div class="card-horizontal-content">
+                <h4 class="fw-bold mb-2">Private Launch Lounge Access</h4>
+                <p class="text-muted small mb-3">Relax before lift-off in our heated climate-controlled sky lounge with artisan coffee & espresso bar.</p>
+                <div class="small fw-semibold text-primary"><i class="bi bi-cup-hot me-1"></i> VIP Hospitality</div>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-lg-6">
+            <div class="card-horizontal-aerova">
+              <div class="card-horizontal-img">
+                <img src="assets/images/lakeside-lodge.png" alt="Ground Transfer">
+              </div>
+              <div class="card-horizontal-content">
+                <h4 class="fw-bold mb-2">Chauffeur Ground Escort</h4>
+                <p class="text-muted small mb-3">Seamless Mercedes Sprinter luxury return transfers from touchdown site straight back to launch pad.</p>
+                <div class="small fw-semibold text-primary"><i class="bi bi-car-front me-1"></i> Door-To-Door Transfer</div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- CONTENT SECTION 4: 5-STEP EXECUTIVE FLIGHT ROADMAP -->
+    <section class="section-padding bg-light-subtle border-top border-bottom">
+      <div class="container">
+        <div class="section-header text-center mb-5">
+          <span class="badge-eyebrow badge-eyebrow-dark"><i class="bi bi-diagram-3-fill me-1"></i> RESERVATION & FLIGHT JOURNEY</span>
+          <h2 class="section-title">5-Step Aerial Experience Journey</h2>
+          <p class="section-desc">From your instant online booking to your 3,500ft sunrise flight & celebratory touchdown toast.</p>
+        </div>
+
+        <div class="row row-cols-1 row-cols-md-3 row-cols-lg-5 g-4">
+          <!-- Step 1 -->
+          <div class="col">
+            <div class="journey-step-card-aerova">
+              <span class="journey-step-pill">STEP 01</span>
+              <div class="journey-step-icon-wrap journey-step-icon-primary">
+                <i class="bi bi-box-seam"></i>
+              </div>
+              <h4 class="journey-step-title">Package Selection</h4>
+              <p class="journey-step-desc">Pick your preferred flight tier, custom date & guest count online in 60 seconds.</p>
+              <span class="journey-step-badge"><i class="bi bi-check-circle-fill text-primary me-1"></i> Instant Booking</span>
+            </div>
+          </div>
+
+          <!-- Step 2 -->
+          <div class="col">
+            <div class="journey-step-card-aerova card-accent-secondary">
+              <span class="journey-step-pill pill-coral">STEP 02</span>
+              <div class="journey-step-icon-wrap journey-step-icon-secondary">
+                <i class="bi bi-cloud-sun"></i>
+              </div>
+              <h4 class="journey-step-title">Weather Check</h4>
+              <p class="journey-step-desc">Automated 24h pre-flight atmospheric wind checks & real-time SMS status updates.</p>
+              <span class="journey-step-badge"><i class="bi bi-shield-check text-danger me-1"></i> 100% Guaranteed</span>
+            </div>
+          </div>
+
+          <!-- Step 3 -->
+          <div class="col">
+            <div class="journey-step-card-aerova card-accent-navy">
+              <span class="journey-step-pill pill-navy">STEP 03</span>
+              <div class="journey-step-icon-wrap journey-step-icon-navy">
+                <i class="bi bi-cup-hot"></i>
+              </div>
+              <h4 class="journey-step-title">VIP Base Lounge</h4>
+              <p class="journey-step-desc">Dawn arrival at launch pad with heated lounge espresso bar & pilot briefing.</p>
+              <span class="journey-step-badge"><i class="bi bi-star-fill text-warning me-1"></i> VIP Hospitality</span>
+            </div>
+          </div>
+
+          <!-- Step 4 -->
+          <div class="col">
+            <div class="journey-step-card-aerova">
+              <span class="journey-step-pill">STEP 04</span>
+              <div class="journey-step-icon-wrap journey-step-icon-primary">
+                <i class="bi bi-balloon"></i>
+              </div>
+              <h4 class="journey-step-title">Sunrise Elevation</h4>
+              <p class="journey-step-desc">Drift quietly up to 3,500ft over misty morning alpine valleys & cloud ceilings.</p>
+              <span class="journey-step-badge"><i class="bi bi-arrow-up-right-circle text-primary me-1"></i> 3,500ft Altitude</span>
+            </div>
+          </div>
+
+          <!-- Step 5 -->
+          <div class="col">
+            <div class="journey-step-card-aerova card-accent-secondary">
+              <span class="journey-step-pill pill-coral">STEP 05</span>
+              <div class="journey-step-icon-wrap journey-step-icon-secondary">
+                <i class="bi bi-trophy"></i>
+              </div>
+              <h4 class="journey-step-title">Touchdown Toast</h4>
+              <p class="journey-step-desc">Champagne toast, signed flight certificate & instant digital HD photo downloads.</p>
+              <span class="journey-step-badge"><i class="bi bi-award-fill text-warning me-1"></i> Signed Certificate</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- CONTENT SECTION 5: CUSTOM PACKAGE ENQUIRY & INSTANT RESERVATION CTA -->
+    <section class="section-padding text-white position-relative" style="background-image: url('assets/images/sunset-romance.png'); background-size: cover; background-position: center;">
+      <div class="hero-overlay"></div>
+      <div class="container position-relative z-2 text-center" style="max-width: 720px;">
+        <span class="badge-eyebrow mb-3"><i class="bi bi-calendar2-check-fill me-1"></i> READY TO FLY?</span>
+        <h2 class="display-5 fw-bold text-white mb-3">Reserve Your Sky Package Today</h2>
+        <p class="lead opacity-90 mb-4">
+          Select your date and lock in your sunrise or sunset flight slot with full weather-cancellation protection.
+        </p>
+        <a href="dashboard.html" class="btn-primary-coral btn-lg px-5">
+          <i class="bi bi-balloon-fill me-2"></i> Access Booking Dashboard
+        </a>
+      </div>
+    </section>
+  </main>
+
+  <!-- FOOTER -->
+  <footer class="aerova-footer">
+    <div class="container">
+      <div class="row g-4 mb-5">
+        <div class="col-lg-4">
+          <a class="aerova-brand text-white mb-3" href="index.html">
+            <div class="aerova-brand-icon">
+              <i class="bi bi-balloon-fill"></i>
+            </div>
+            <span>AEROVA</span>
+          </a>
+          <p class="footer-brand-desc">
+            Premier hot air balloon rides and high-altitude aerial adventures. Certified pilots, sunrise serenity, and lifelong memories above the clouds.
+          </p>
+        </div>
+
+        <div class="col-6 col-lg-2">
+          <h5 class="footer-title">Navigation</h5>
+          <ul class="footer-links">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="packages.html">Packages</a></li>
+            <li><a href="experiences.html">Experiences</a></li>
+            <li><a href="weather.html">Safety</a></li>
+            <li><a href="gallery.html">Gallery</a></li>
+            <li><a href="about.html">About</a></li>
+            <li><a href="contact.html">Contact</a></li>
+            <li><a href="dashboard.html">Dashboard</a></li>
+          </ul>
+        </div>
+
+        <div class="col-6 col-lg-3">
+          <h5 class="footer-title">Flight Categories</h5>
+          <ul class="footer-links">
+            <li><a href="packages.html">Sunrise Horizon Tour</a></li>
+            <li><a href="packages.html">Sunset Romance Escape</a></li>
+            <li><a href="packages.html">Private VIP Sky Charter</a></li>
+            <li><a href="packages.html">Family Aerial Adventure</a></li>
+            <li><a href="packages.html">Highline Alpine Expedition</a></li>
+          </ul>
+        </div>
+
+        <div class="col-lg-3">
+          <h5 class="footer-title">Contact & Base Launch</h5>
+          <p class="small footer-contact-item mb-2"><i class="bi bi-geo-alt-fill text-primary me-2"></i> 1400 Horizon Valley Way, Sky Ridge, CA</p>
+          <p class="small footer-contact-item mb-2"><i class="bi bi-telephone-fill text-primary me-2"></i> +1 (800) 555-AERO</p>
+          <p class="small footer-contact-item mb-3"><i class="bi bi-envelope-fill text-primary me-2"></i> fly@aerovaballoons.com</p>
+          <div class="d-flex flex-wrap align-items-center gap-2 mt-3">
+            <a href="login.html" class="btn-footer-login">Login</a>
+            <a href="dashboard.html" class="btn-footer-dashboard">Guest Dashboard</a>
+          </div>
+        </div>
+      </div>
+
+      <div class="footer-bottom d-flex flex-column flex-sm-row justify-content-between align-items-center gap-3">
+        <div>&copy; 2026 AEROVA Aerial Tours. All rights reserved.</div>
+        <div class="d-flex gap-3">
+          <a href="#" aria-label="Facebook"><i class="bi bi-facebook fs-5"></i></a>
+          <a href="#" aria-label="Instagram"><i class="bi bi-instagram fs-5"></i></a>
+          <a href="#" aria-label="YouTube"><i class="bi bi-youtube fs-5"></i></a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <button class="back-to-top js-back-to-top" title="Back to top" aria-label="Back to top">
+    <i class="bi bi-arrow-up-short fs-3"></i>
+  </button>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="assets/js/main.js"></script>
+</body>
+</html>
+
+

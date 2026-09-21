@@ -1,0 +1,532 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light" dir="ltr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>AEROVA - Home 2 | Bento & Split Experience</title>
+  <meta name="description" content="Experience AEROVA's premier hot air balloon rides with interactive booking, sunrise bento showcases, and high-altitude flight packages.">
+
+  <!-- Bootstrap 5 CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+  <!-- Bootstrap Icons -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css" rel="stylesheet">
+  <!-- Master Stylesheet -->
+  <link rel="stylesheet" href="assets/css/style.css">
+  <!-- Favicon / Browser Tab Logo -->
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><defs><linearGradient id='aerovaGrad' x1='0%25' y1='0%25' x2='100%25' y2='100%25'><stop offset='0%25' stop-color='%23E87561'/><stop offset='100%25' stop-color='%235B9BD5'/></linearGradient></defs><circle cx='50' cy='50' r='50' fill='url(%23aerovaGrad)'/><path d='M50 18 C35 18 26 29 26 42 C26 53 35 63 43 69 L43 75 L57 75 L57 69 C65 63 74 53 74 42 C74 29 65 18 50 18 Z' fill='%23ffffff'/><rect x='44' y='78' width='12' height='8' rx='2' fill='%23ffffff'/><line x1='44' y1='73' x2='45' y2='78' stroke='%23ffffff' stroke-width='1.5'/><line x1='56' y1='73' x2='55' y2='78' stroke='%23ffffff' stroke-width='1.5'/></svg>" type="image/svg+xml">
+</head>
+<body>
+
+  <!-- PAGE PRELOADER -->
+  <div id="page-preloader" class="aerova-preloader">
+    <div class="preloader-inner">
+      <div class="preloader-balloon-wrapper">
+        <div class="preloader-ring"></div>
+        <div class="preloader-balloon">
+          <i class="bi bi-balloon-fill"></i>
+        </div>
+      </div>
+      <div class="preloader-brand">AEROVA</div>
+      <div class="preloader-subtext">Preparing Sky Horizon Experience...</div>
+      <div class="preloader-bar">
+        <div class="preloader-progress"></div>
+      </div>
+    </div>
+  </div>
+
+  <!-- HEADER -->
+  <header class="aerova-header">
+    <div class="container">
+      <nav class="navbar navbar-expand-lg navbar-light p-0">
+        <a class="aerova-brand navbar-brand" href="index.html">
+          <div class="aerova-brand-icon">
+            <i class="bi bi-balloon-fill"></i>
+          </div>
+          <span>AEROVA</span>
+        </a>
+
+        <button class="navbar-toggler collapsed border-0 shadow-none p-2" type="button" data-bs-toggle="collapse" data-bs-target="#aerovaNavbar" aria-controls="aerovaNavbar" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <div class="collapse navbar-collapse" id="aerovaNavbar">
+          <ul class="navbar-nav mx-auto mb-2 mb-lg-0 gap-lg-1">
+            <li class="nav-item dropdown">
+              <a class="aerova-nav-link dropdown-toggle active" href="#" id="homeDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                Home
+              </a>
+              <ul class="dropdown-menu border-0 shadow-lg rounded-3" aria-labelledby="homeDropdown">
+                <li><a class="dropdown-item py-2 fw-semibold" href="index.html"><i class="bi bi-house-door-fill text-primary me-2"></i> Home 1 (Cinematic)</a></li>
+                <li><a class="dropdown-item py-2 fw-semibold active" href="home-2.html"><i class="bi bi-balloon-fill text-secondary me-2"></i> Home 2 (Bento & Split)</a></li>
+              </ul>
+            </li>
+            <li class="nav-item"><a class="aerova-nav-link" href="packages.html">Packages</a></li>
+            <li class="nav-item"><a class="aerova-nav-link" href="experiences.html">Experiences</a></li>
+            <li class="nav-item"><a class="aerova-nav-link" href="weather.html">Safety</a></li>
+            <li class="nav-item"><a class="aerova-nav-link" href="gallery.html">Gallery</a></li>
+            <li class="nav-item"><a class="aerova-nav-link" href="about.html">About</a></li>
+            <li class="nav-item"><a class="aerova-nav-link" href="contact.html">Contact</a></li>
+            <li class="nav-item"><a class="aerova-nav-link" href="dashboard.html">Dashboard</a></li>
+          </ul>
+
+          <div class="header-actions">
+            <button class="btn-icon-toggle js-theme-toggle" title="Toggle Theme" aria-label="Toggle Theme">
+              <i class="bi bi-moon-stars-fill js-theme-icon"></i>
+            </button>
+            <button class="btn-icon-toggle js-rtl-toggle" title="Toggle RTL" aria-label="Toggle LTR/RTL">
+              <span class="js-rtl-label">LTR</span>
+            </button>
+            <a href="login.html" class="btn-primary-coral">
+              <i class="bi bi-person-circle"></i> Login
+            </a>
+          </div>
+        </div>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <!-- SECTION 1: SPLIT-SCREEN INTERACTIVE HERO (Home 2 Unique Concept) -->
+    <section class="section-padding bg-watermark-section pt-5 mt-5" style="background-image: url('assets/images/pkg-family-adventure.jpg'); min-height: 85vh; display: flex; align-items: center;">
+      <div class="bg-watermark-overlay"></div>
+      <div class="container position-relative z-2">
+        <div class="row align-items-center g-5">
+          <!-- Left Column: Headline & Reservation Widget -->
+          <div class="col-lg-6">
+            <span class="badge-eyebrow badge-eyebrow-dark mb-3"><i class="bi bi-balloon-heart-fill me-1"></i> AERIAL ADVENTURES CONCEPT 2</span>
+            <h1 class="display-4 fw-extrabold text-dark mb-3">Touch the Sky in Serene Luxury</h1>
+            <p class="lead text-muted mb-4">
+              Experience premier hot air ballooning with certified master pilots over breathtaking mountain valleys and sunrise horizons.
+            </p>
+
+            <!-- Instant Booking Quick Widget Box -->
+            <div class="card-aerova p-4 border-primary shadow-lg bg-surface">
+              <h4 class="fw-bold fs-5 mb-3"><i class="bi bi-calendar2-check text-primary me-2"></i> Instant Flight Reservation</h4>
+              <form action="dashboard.html" class="row g-3">
+                <div class="col-6">
+                  <label class="form-label small fw-bold">Flight Date</label>
+                  <input type="date" class="form-control rounded-pill" required>
+                </div>
+                <div class="col-6">
+                  <label class="form-label small fw-bold">Passengers</label>
+                  <select class="form-select rounded-pill">
+                    <option>1 Passenger</option>
+                    <option selected>2 Duo (Couple)</option>
+                    <option>4 Family Group</option>
+                    <option>Private VIP Charter</option>
+                  </select>
+                </div>
+                <div class="col-12">
+                  <label class="form-label small fw-bold">Flight Package</label>
+                  <select class="form-select rounded-pill">
+                    <option>Sunrise Horizon Explorer ($290)</option>
+                    <option>Sunset Romance Escape ($450)</option>
+                    <option>Private Sky Charter ($680)</option>
+                  </select>
+                </div>
+                <div class="col-12 mt-3">
+                  <button type="submit" class="btn-primary-coral w-100 py-2 justify-content-center fs-6">
+                    <i class="bi bi-lightning-fill me-2"></i> Check Available Slots & Reserve
+                  </button>
+                </div>
+              </form>
+            </div>
+          </div>
+
+          <!-- Right Column: Visual Hero Photo Card Stack -->
+          <div class="col-lg-6">
+            <div class="position-relative">
+              <div class="card-overlay-aerova shadow-lg rounded-4 overflow-hidden" style="height: 480px;">
+                <img src="assets/images/home2-hero-drift.jpg" alt="Home 2 Hero Sky">
+                <div class="card-overlay-content p-4">
+                  <span class="badge bg-primary rounded-pill w-auto align-self-start mb-2"><i class="bi bi-star-fill me-1"></i> 3,500ft Highline</span>
+                  <h3 class="fw-bold text-white fs-2 mb-1">Sky Ridge Sunrise Drift</h3>
+                  <p class="small text-white-50 mb-0">Join over 15,000 satisfied guests floating over California's finest alpine valleys.</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- SECTION 2: ASYMMETRIC BENTO GRID EXPERIENCE SHOWCASE -->
+    <section class="section-padding">
+      <div class="container">
+        <div class="section-header text-center">
+          <span class="badge-eyebrow badge-eyebrow-dark">CURATED CATEGORIES</span>
+          <h2 class="section-title">Explore Flight Themes</h2>
+          <p class="section-desc">Visual bento showcase highlighting our unique sunrise, romantic, and photography flight offerings.</p>
+        </div>
+
+        <div class="bento-grid">
+          <!-- Bento Item 1 -->
+          <div class="bento-card-large">
+            <div class="card-overlay-aerova" style="height: 340px;">
+              <img src="assets/images/home2-sunrise-valley.jpg" alt="River Sunrise Flight">
+              <div class="card-overlay-content">
+                <span class="badge bg-warning text-dark fw-bold rounded-pill w-auto align-self-start mb-2">Dawn Favorite</span>
+                <h3 class="fw-bold text-white fs-3 mb-1">Sunrise Valley Expedition</h3>
+                <p class="small text-white-50 mb-3">Watch the morning sun illuminate winding river channels and fog-draped pine woods.</p>
+                <a href="packages.html" class="btn-primary-coral btn-sm w-auto">Explore Package <i class="bi bi-arrow-right"></i></a>
+              </div>
+            </div>
+          </div>
+
+          <!-- Bento Item 2 -->
+          <div class="bento-card-small">
+            <div class="card-overlay-aerova" style="height: 340px;">
+              <img src="assets/images/hero-packages.jpg" alt="Misty Forest Canopy">
+              <div class="card-overlay-content">
+                <span class="badge bg-info text-dark fw-bold rounded-pill w-auto align-self-start mb-2">Scenic Serenity</span>
+                <h4 class="fw-bold text-white fs-4 mb-1">Misty Forest Canopy</h4>
+                <p class="small text-white-50 mb-2">Low-altitude peaceful drifting over old-growth redwood reserves.</p>
+                <a href="experiences.html" class="btn btn-sm btn-outline-light rounded-pill w-auto">View Experience</a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- SECTION 3: LIVE ALTITUDE & WEATHER READINESS RADAR (Watermark BG) -->
+    <section class="section-padding bg-watermark-section border-top border-bottom" style="background-image: url('assets/images/pkg-classic-valley.jpg');">
+      <div class="bg-watermark-overlay"></div>
+      <div class="container position-relative z-2">
+        <div class="row align-items-center g-5">
+          <div class="col-lg-6">
+            <span class="badge-eyebrow badge-eyebrow-dark">RADAR MONITORING</span>
+            <h2 class="section-title">Live Flight Decision Metrics</h2>
+            <p class="section-desc mb-4">
+              We track wind speed gradients and thermal dynamics to ensure 100% smooth, peaceful flight conditions.
+            </p>
+            <div class="row g-3">
+              <div class="col-6">
+                <div class="stat-box">
+                  <div class="stat-number">4 Knots</div>
+                  <div class="stat-label">Calm Wind Average</div>
+                </div>
+              </div>
+              <div class="col-6">
+                <div class="stat-box">
+                  <div class="stat-number">3,500ft</div>
+                  <div class="stat-label">Max Flight Altitude</div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col-lg-6">
+            <div class="weather-status-card">
+              <div class="d-flex align-items-center justify-content-between mb-3">
+                <h4 class="fw-bold text-white mb-0"><i class="bi bi-shield-check text-success me-2"></i> Launch Status</h4>
+                <span class="weather-badge-success">OPERATIONAL</span>
+              </div>
+              <p class="small opacity-80 mb-3">Surface winds under 5 knots. Thermal lift is optimal for morning flight operations.</p>
+              <div class="progress mb-2" style="height: 10px;">
+                <div class="progress-bar bg-success" role="progressbar" style="width: 92%;" aria-valuenow="92" aria-valuemin="0" aria-valuemax="100"></div>
+              </div>
+              <div class="d-flex justify-content-between small text-white-50">
+                <span>Flight Safety Rating: 98% Optimal</span>
+                <span>FAA Cleared</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- SECTION 4: FLOATING PARALLAX PACKAGE COLLECTIONS -->
+    <section class="section-padding">
+      <div class="container">
+        <div class="section-header text-center">
+          <span class="badge-eyebrow badge-eyebrow-dark">FEATURED TIERS</span>
+          <h2 class="section-title">Signature Sky Packages</h2>
+          <p class="section-desc">Handcrafted packages tailored for couples, families, and private charters.</p>
+        </div>
+
+        <div class="row g-4">
+          <!-- Tier 1 -->
+          <div class="col-lg-4">
+            <div class="card-aerova">
+              <div class="card-img-wrapper">
+                <img src="assets/images/home2-sunrise-explorer.jpg" alt="Sunrise Horizon Explorer">
+                <span class="card-price-tag">$290</span>
+              </div>
+              <div class="card-body-aerova">
+                <h3 class="card-title-aerova">Sunrise Horizon Explorer</h3>
+                <p class="card-desc-aerova">Watch dawn break over misty valleys with champagne toast & morning pastries.</p>
+                <a href="packages.html" class="btn-primary-coral w-100 justify-content-center mt-auto">Book Explorer Tier</a>
+              </div>
+            </div>
+          </div>
+
+          <!-- Tier 2 -->
+          <div class="col-lg-4">
+            <div class="card-aerova border-primary shadow-lg">
+              <div class="card-img-wrapper">
+                <img src="assets/images/home2-sunset-romance.jpg" alt="Sunset Romance Duo">
+                <span class="card-price-tag">$490</span>
+              </div>
+              <div class="card-body-aerova">
+                <h3 class="card-title-aerova">Sunset Romance Duo</h3>
+                <p class="card-desc-aerova">Private duo flight during golden hour with Moët champagne and chocolate hampers.</p>
+                <a href="packages.html" class="btn-primary-coral w-100 justify-content-center mt-auto">Book Romance Tier</a>
+              </div>
+            </div>
+          </div>
+
+          <!-- Tier 3 -->
+          <div class="col-lg-4">
+            <div class="card-aerova">
+              <div class="card-img-wrapper">
+                <img src="assets/images/home2-vip-sky-suite.jpg" alt="VIP Private Sky Suite">
+                <span class="card-price-tag">$750</span>
+              </div>
+              <div class="card-body-aerova">
+                <h3 class="card-title-aerova">VIP Private Sky Suite</h3>
+                <p class="card-desc-aerova">Complete basket charter with custom launch route, drone photography, and chauffeur.</p>
+                <a href="packages.html" class="btn-primary-coral w-100 justify-content-center mt-auto">Book VIP Suite</a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- SECTION 5: INTERACTIVE SKY ALTITUDE & VISTA SHOWCASE (Home 2 Modern Replacement) -->
+    <section class="section-padding bg-watermark-section border-top border-bottom" style="background-image: url('assets/images/sunrise-explorer.png');">
+      <div class="bg-watermark-overlay"></div>
+      <div class="container position-relative z-2">
+        <div class="section-header text-center">
+          <span class="badge-eyebrow badge-eyebrow-dark"><i class="bi bi-bar-chart-steps me-1"></i> ALTITUDE PROGRESSION</span>
+          <h2 class="section-title">The 4 Altitude Phases of Flight</h2>
+          <p class="section-desc">Experience four distinct visual perspectives during your 3,500ft hot air balloon voyage.</p>
+        </div>
+
+        <div class="row g-4">
+          <!-- Phase 1 -->
+          <div class="col-lg-3 col-md-6">
+            <div class="card-aerova">
+              <div class="card-img-wrapper" style="height: 200px;">
+                <img src="assets/images/home2-canopy-skim.jpg" alt="500ft Altitude Skimmer">
+                <span class="card-badge-top bg-primary"><i class="bi bi-tree-fill me-1"></i> 500 FT</span>
+              </div>
+              <div class="card-body-aerova p-3">
+                <h4 class="fw-bold fs-5 text-dark mb-1">Canopy Skim</h4>
+                <p class="small text-muted mb-0">Float silently just above misty pine woods & morning river bends.</p>
+              </div>
+            </div>
+          </div>
+
+          <!-- Phase 2 -->
+          <div class="col-lg-3 col-md-6">
+            <div class="card-aerova">
+              <div class="card-img-wrapper" style="height: 200px;">
+                <img src="assets/images/home2-valley-panorama.jpg" alt="1,500ft Valley Panorama">
+                <span class="card-badge-top bg-primary"><i class="bi bi-eye-fill me-1"></i> 1,500 FT</span>
+              </div>
+              <div class="card-body-aerova p-3">
+                <h4 class="fw-bold fs-5 text-dark mb-1">Valley Panorama</h4>
+                <p class="small text-muted mb-0">Full 360-degree vistas of golden sunrise mist lifting off lakes.</p>
+              </div>
+            </div>
+          </div>
+
+          <!-- Phase 3 -->
+          <div class="col-lg-3 col-md-6">
+            <div class="card-aerova">
+              <div class="card-img-wrapper" style="height: 200px;">
+                <img src="assets/images/pkg-sunrise-flight.jpg" alt="2,500ft Cloud Ceiling">
+                <span class="card-badge-top bg-primary"><i class="bi bi-cloud-fill me-1"></i> 2,500 FT</span>
+              </div>
+              <div class="card-body-aerova p-3">
+                <h4 class="fw-bold fs-5 text-dark mb-1">Cloud Layer Drift</h4>
+                <p class="small text-muted mb-0">Gliding quietly above white cotton cloud beds in pure serenity.</p>
+              </div>
+            </div>
+          </div>
+
+          <!-- Phase 4 -->
+          <div class="col-lg-3 col-md-6">
+            <div class="card-aerova">
+              <div class="card-img-wrapper" style="height: 200px;">
+                <img src="assets/images/pkg-private-odyssey.jpg" alt="3,500ft Alpine Apex">
+                <span class="card-badge-top bg-secondary"><i class="bi bi-star-fill me-1"></i> 3,500 FT</span>
+              </div>
+              <div class="card-body-aerova p-3">
+                <h4 class="fw-bold fs-5 text-dark mb-1">Alpine Apex Ceiling</h4>
+                <p class="small text-muted mb-0">Peak altitude offering views stretching over 50 miles of mountain ridges.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- SECTION 6: CONNECTED 5-STEP PROCESS FLOW (Reference Image 2 Inspired Layout) -->
+    <section class="section-padding">
+      <div class="container">
+        <div class="section-header text-center">
+          <span class="badge-eyebrow badge-eyebrow-dark"><i class="bi bi-diagram-3-fill me-1"></i> THE AEROVA PROCESS</span>
+          <h2 class="section-title">5-Step Aerial Flight Journey</h2>
+          <p class="section-desc">From online reservation to your airborne champagne toast and post-flight memory album.</p>
+        </div>
+
+        <div class="process-flow-container">
+          <!-- Step 1 -->
+          <div class="process-step-item step-theme-navy">
+            <div class="process-step-header">
+              <h4>RESERVE</h4>
+              <div class="process-step-arrow"><i class="bi bi-arrow-right"></i></div>
+            </div>
+            <div class="process-step-body">
+              <p>Choose your date, flight package & guest count online in 60 seconds.</p>
+              <div class="process-step-icon"><i class="bi bi-calendar-check-fill"></i></div>
+            </div>
+          </div>
+
+          <!-- Step 2 -->
+          <div class="process-step-item step-theme-primary">
+            <div class="process-step-header">
+              <h4>PREPARE</h4>
+              <div class="process-step-arrow"><i class="bi bi-arrow-right"></i></div>
+            </div>
+            <div class="process-step-body">
+              <p>Receive pre-flight live weather updates & dawn launch instructions.</p>
+              <div class="process-step-icon"><i class="bi bi-cloud-sun-fill"></i></div>
+            </div>
+          </div>
+
+          <!-- Step 3 -->
+          <div class="process-step-item step-theme-coral">
+            <div class="process-step-header">
+              <h4>INFLATE</h4>
+              <div class="process-step-arrow"><i class="bi bi-arrow-right"></i></div>
+            </div>
+            <div class="process-step-body">
+              <p>Watch hot-air burners illuminate & inflate the massive balloon envelope.</p>
+              <div class="process-step-icon"><i class="bi bi-fire"></i></div>
+            </div>
+          </div>
+
+          <!-- Step 4 -->
+          <div class="process-step-item step-theme-blue">
+            <div class="process-step-header">
+              <h4>ASCEND</h4>
+              <div class="process-step-arrow"><i class="bi bi-arrow-right"></i></div>
+            </div>
+            <div class="process-step-body">
+              <p>Drift silently up to 3,500ft over misty alpine valleys & ridges.</p>
+              <div class="process-step-icon"><i class="bi bi-arrow-up-circle-fill"></i></div>
+            </div>
+          </div>
+
+          <!-- Step 5 -->
+          <div class="process-step-item step-theme-gold">
+            <div class="process-step-header">
+              <h4>CELEBRATE</h4>
+            </div>
+            <div class="process-step-body">
+              <p>Touchdown champagne toast, signed flight certificate & photo download.</p>
+              <div class="process-step-icon"><i class="bi bi-award-fill"></i></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- SECTION 7: FINAL SCENIC RESERVATION CTA -->
+    <section class="section-padding pt-0">
+      <div class="container">
+        <div class="position-relative rounded-4 overflow-hidden text-white text-center p-4 p-md-5 shadow-lg" style="background-image: url('assets/images/misty-forest-canopy.jpg'); background-size: cover; background-position: center; min-height: 380px; display: flex; align-items: center; justify-content: center;">
+          <div class="hero-overlay rounded-4"></div>
+          <div class="position-relative z-2 py-3" style="max-width: 720px; margin: 0 auto;">
+            <span class="badge-eyebrow mb-3"><i class="bi bi-balloon-fill me-1"></i> HOME 2 EXCLUSIVE</span>
+            <h2 class="display-5 fw-bold text-white mb-3">Start Your Cloud Journey Now</h2>
+            <p class="lead opacity-90 mb-4 text-white">
+              Reserve your flight online with instant confirmation and 100% weather refund guarantee.
+            </p>
+            <a href="packages.html" class="btn-primary-coral btn-lg px-5">
+              <i class="bi bi-balloon-fill me-2"></i> Book Home 2 Experience
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- FOOTER -->
+  <footer class="aerova-footer">
+    <div class="container">
+      <div class="row g-4 mb-5">
+        <div class="col-lg-4">
+          <a class="aerova-brand text-white mb-3" href="index.html">
+            <div class="aerova-brand-icon">
+              <i class="bi bi-balloon-fill"></i>
+            </div>
+            <span>AEROVA</span>
+          </a>
+          <p class="footer-brand-desc">
+            Premier hot air balloon rides and high-altitude aerial adventures. Certified pilots, sunrise serenity, and lifelong memories above the clouds.
+          </p>
+        </div>
+
+        <div class="col-6 col-lg-2">
+          <h5 class="footer-title">Navigation</h5>
+          <ul class="footer-links">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="packages.html">Packages</a></li>
+            <li><a href="experiences.html">Experiences</a></li>
+            <li><a href="weather.html">Safety</a></li>
+            <li><a href="gallery.html">Gallery</a></li>
+            <li><a href="about.html">About</a></li>
+            <li><a href="contact.html">Contact</a></li>
+            <li><a href="dashboard.html">Dashboard</a></li>
+          </ul>
+        </div>
+
+        <div class="col-6 col-lg-3">
+          <h5 class="footer-title">Flight Categories</h5>
+          <ul class="footer-links">
+            <li><a href="packages.html">Sunrise Horizon Tour</a></li>
+            <li><a href="packages.html">Sunset Romance Escape</a></li>
+            <li><a href="packages.html">Private VIP Sky Charter</a></li>
+            <li><a href="packages.html">Family Aerial Adventure</a></li>
+            <li><a href="packages.html">Highline Alpine Expedition</a></li>
+          </ul>
+        </div>
+
+        <div class="col-lg-3">
+          <h5 class="footer-title">Contact & Base Launch</h5>
+          <p class="small footer-contact-item mb-2"><i class="bi bi-geo-alt-fill text-primary me-2"></i> 1400 Horizon Valley Way, Sky Ridge, CA</p>
+          <p class="small footer-contact-item mb-2"><i class="bi bi-telephone-fill text-primary me-2"></i> +1 (800) 555-AERO</p>
+          <p class="small footer-contact-item mb-3"><i class="bi bi-envelope-fill text-primary me-2"></i> fly@aerovaballoons.com</p>
+          <div class="d-flex flex-wrap align-items-center gap-2 mt-3">
+            <a href="login.html" class="btn-footer-login">Login</a>
+            <a href="dashboard.html" class="btn-footer-dashboard">Guest Dashboard</a>
+          </div>
+        </div>
+      </div>
+
+      <div class="footer-bottom d-flex flex-column flex-sm-row justify-content-between align-items-center gap-3">
+        <div>&copy; 2026 AEROVA Aerial Tours. All rights reserved.</div>
+        <div class="d-flex gap-3">
+          <a href="#" aria-label="Facebook"><i class="bi bi-facebook fs-5"></i></a>
+          <a href="#" aria-label="Instagram"><i class="bi bi-instagram fs-5"></i></a>
+          <a href="#" aria-label="YouTube"><i class="bi bi-youtube fs-5"></i></a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <button class="back-to-top js-back-to-top" title="Back to top" aria-label="Back to top">
+    <i class="bi bi-arrow-up-short fs-3"></i>
+  </button>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="assets/js/main.js"></script>
+</body>
+</html>
+
+
+

@@ -1,0 +1,502 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light" dir="ltr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>AEROVA - Weather & Safety Standards</title>
+  <meta name="description" content="Learn about AEROVA's 100% safety record, live weather flight readiness, FAA pilot certifications, and weather refund guarantee.">
+
+  <!-- Bootstrap 5 CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+  <!-- Bootstrap Icons -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css" rel="stylesheet">
+  <!-- Master Stylesheet -->
+  <link rel="stylesheet" href="assets/css/style.css">
+  <!-- Favicon / Browser Tab Logo -->
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><defs><linearGradient id='aerovaGrad' x1='0%25' y1='0%25' x2='100%25' y2='100%25'><stop offset='0%25' stop-color='%23E87561'/><stop offset='100%25' stop-color='%235B9BD5'/></linearGradient></defs><circle cx='50' cy='50' r='50' fill='url(%23aerovaGrad)'/><path d='M50 18 C35 18 26 29 26 42 C26 53 35 63 43 69 L43 75 L57 75 L57 69 C65 63 74 53 74 42 C74 29 65 18 50 18 Z' fill='%23ffffff'/><rect x='44' y='78' width='12' height='8' rx='2' fill='%23ffffff'/><line x1='44' y1='73' x2='45' y2='78' stroke='%23ffffff' stroke-width='1.5'/><line x1='56' y1='73' x2='55' y2='78' stroke='%23ffffff' stroke-width='1.5'/></svg>" type="image/svg+xml">
+</head>
+<body>
+
+  <!-- PAGE PRELOADER -->
+  <div id="page-preloader" class="aerova-preloader">
+    <div class="preloader-inner">
+      <div class="preloader-balloon-wrapper">
+        <div class="preloader-ring"></div>
+        <div class="preloader-balloon">
+          <i class="bi bi-balloon-fill"></i>
+        </div>
+      </div>
+      <div class="preloader-brand">AEROVA</div>
+      <div class="preloader-subtext">Preparing Sky Horizon Experience...</div>
+      <div class="preloader-bar">
+        <div class="preloader-progress"></div>
+      </div>
+    </div>
+  </div>
+
+  <!-- HEADER -->
+  <header class="aerova-header">
+    <div class="container">
+      <nav class="navbar navbar-expand-lg navbar-light p-0">
+        <a class="aerova-brand navbar-brand" href="index.html">
+          <div class="aerova-brand-icon">
+            <i class="bi bi-balloon-fill"></i>
+          </div>
+          <span>AEROVA</span>
+        </a>
+
+        <button class="navbar-toggler collapsed border-0 shadow-none p-2" type="button" data-bs-toggle="collapse" data-bs-target="#aerovaNavbar" aria-controls="aerovaNavbar" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <div class="collapse navbar-collapse" id="aerovaNavbar">
+          <ul class="navbar-nav mx-auto mb-2 mb-lg-0 gap-lg-1">
+            <li class="nav-item dropdown">
+              <a class="aerova-nav-link dropdown-toggle" href="#" id="homeDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                Home
+              </a>
+              <ul class="dropdown-menu border-0 shadow-lg rounded-3" aria-labelledby="homeDropdown">
+                <li><a class="dropdown-item py-2 fw-semibold" href="index.html"><i class="bi bi-house-door-fill text-primary me-2"></i> Home 1 (Cinematic)</a></li>
+                <li><a class="dropdown-item py-2 fw-semibold" href="home-2.html"><i class="bi bi-balloon-fill text-secondary me-2"></i> Home 2 (Bento & Split)</a></li>
+              </ul>
+            </li>
+            <li class="nav-item"><a class="aerova-nav-link" href="packages.html">Packages</a></li>
+            <li class="nav-item"><a class="aerova-nav-link" href="experiences.html">Experiences</a></li>
+            <li class="nav-item"><a class="aerova-nav-link active" href="weather.html">Safety</a></li>
+            <li class="nav-item"><a class="aerova-nav-link" href="gallery.html">Gallery</a></li>
+            <li class="nav-item"><a class="aerova-nav-link" href="about.html">About</a></li>
+            <li class="nav-item"><a class="aerova-nav-link" href="contact.html">Contact</a></li>
+            <li class="nav-item"><a class="aerova-nav-link" href="dashboard.html">Dashboard</a></li>
+          </ul>
+
+          <div class="header-actions">
+            <button class="btn-icon-toggle js-theme-toggle" title="Toggle Theme" aria-label="Toggle Theme">
+              <i class="bi bi-moon-stars-fill js-theme-icon"></i>
+            </button>
+            <button class="btn-icon-toggle js-rtl-toggle" title="Toggle RTL" aria-label="Toggle LTR/RTL">
+              <span class="js-rtl-label">LTR</span>
+            </button>
+            <a href="login.html" class="btn-primary-coral">
+              <i class="bi bi-person-circle"></i> Login
+            </a>
+          </div>
+        </div>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <!-- UNIFORM HEIGHT INNER HERO -->
+    <section class="hero-inner" style="background-image: url('assets/images/hero-about.jpg');">
+      <div class="hero-overlay"></div>
+      <div class="hero-inner-content">
+        <span class="badge-eyebrow"><i class="bi bi-shield-check me-1"></i> UNCOMPROMISING SAFETY</span>
+        <h1 class="hero-title">Weather & Safety Standards</h1>
+        <p class="hero-subtitle">Live flight readiness monitoring, FAA master pilot protocols, and 100% weather refund guarantee.</p>
+        <ul class="breadcrumb-custom">
+          <li><a href="index.html">Home</a></li>
+          <li>/</li>
+          <li class="text-white">Weather & Safety</li>
+        </ul>
+      </div>
+    </section>
+
+    <!-- CONTENT SECTION 1: LIVE FLIGHT READINESS UI -->
+    <section class="section-padding">
+      <div class="container">
+        <div class="weather-status-card">
+          <div class="row align-items-center g-4">
+            <div class="col-lg-6">
+              <div class="weather-badge-success mb-3">
+                <i class="bi bi-check-circle-fill"></i> TODAY'S FLIGHT STATUS: CLEARED TO FLY
+              </div>
+              <h2 class="display-6 fw-bold text-white mb-3">Sky Ridge Base Launch Conditions</h2>
+              <p class="opacity-80 mb-0">
+                Our flight operations team monitors micro-climate wind anemometers and radar data 24/7. Hot air ballooning requires calm surface winds under 8 knots and clear visibility.
+              </p>
+            </div>
+            <div class="col-lg-6">
+              <div class="row g-3">
+                <div class="col-6">
+                  <div class="weather-metric text-center">
+                    <div class="small opacity-75 mb-1"><i class="bi bi-wind text-info me-1"></i> Surface Wind</div>
+                    <div class="fw-bold fs-4 text-white">4.2 Knots</div>
+                    <div class="small text-success fw-bold">Optimal (< 8 Knots)</div>
+                  </div>
+                </div>
+                <div class="col-6">
+                  <div class="weather-metric text-center">
+                    <div class="small opacity-75 mb-1"><i class="bi bi-eye text-info me-1"></i> Visibility</div>
+                    <div class="fw-bold fs-4 text-white">10+ Miles</div>
+                    <div class="small text-success fw-bold">Crystal Clear</div>
+                  </div>
+                </div>
+                <div class="col-6">
+                  <div class="weather-metric text-center">
+                    <div class="small opacity-75 mb-1"><i class="bi bi-thermometer-half text-info me-1"></i> Launch Temp</div>
+                    <div class="fw-bold fs-4 text-white">62&deg;F / 16&deg;C</div>
+                    <div class="small text-success fw-bold">Pleasant Thermal</div>
+                  </div>
+                </div>
+                <div class="col-6">
+                  <div class="weather-metric text-center">
+                    <div class="small opacity-75 mb-1"><i class="bi bi-cloud-sun text-info me-1"></i> Cloud Base</div>
+                    <div class="fw-bold fs-4 text-white">8,500 Feet</div>
+                    <div class="small text-success fw-bold">Clear Sky Ceiling</div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- CONTENT SECTION 2: 4-POINT SAFETY INSPECTION CARDS -->
+    <section class="section-padding bg-light-subtle border-top border-bottom">
+      <div class="container">
+        <div class="section-header text-center">
+          <span class="badge-eyebrow badge-eyebrow-dark">SAFETY PROTOCOLS</span>
+          <h2 class="section-title">Our 4 Pillars of Passenger Safety</h2>
+          <p class="section-desc">Every flight strictly adheres to federal aviation guidelines and rigorous pre-flight equipment checks.</p>
+        </div>
+
+        <div class="row g-4">
+          <!-- Pillar 1 -->
+          <div class="col-lg-3 col-md-6">
+            <div class="card-aerova h-100">
+              <div class="card-img-wrapper" style="height: 170px;">
+                <img src="assets/images/safety-faa-inspection.jpg" alt="FAA Inspection">
+                <span class="card-badge-top"><i class="bi bi-patch-check-fill me-1"></i> FAA Standard</span>
+              </div>
+              <div class="card-body-aerova p-4 text-center">
+                <h4 class="fw-bold fs-5 mb-2">FAA Equipment Inspection</h4>
+                <p class="small text-muted mb-0">Baskets, burner fuel lines, and ripstop envelopes undergo mandatory 100-hour FAA technician inspections.</p>
+              </div>
+            </div>
+          </div>
+
+          <!-- Pillar 2 -->
+          <div class="col-lg-3 col-md-6">
+            <div class="card-aerova h-100">
+              <div class="card-img-wrapper" style="height: 170px;">
+                <img src="assets/images/safety-master-pilots.jpg" alt="Master Pilots">
+                <span class="card-badge-top"><i class="bi bi-person-badge-fill me-1"></i> Certified Pilots</span>
+              </div>
+              <div class="card-body-aerova p-4 text-center">
+                <h4 class="fw-bold fs-5 mb-2">Commercial Master Pilots</h4>
+                <p class="small text-muted mb-0">Our pilots are commercially certified master aeronauts with a flawless safety record across 25+ years flying.</p>
+              </div>
+            </div>
+          </div>
+
+          <!-- Pillar 3 -->
+          <div class="col-lg-3 col-md-6">
+            <div class="card-aerova h-100">
+              <div class="card-img-wrapper" style="height: 170px;">
+                <img src="assets/images/safety-radio-radar.jpg" alt="Real-Time Radar">
+                <span class="card-badge-top"><i class="bi bi-broadcast me-1"></i> Live Radar</span>
+              </div>
+              <div class="card-body-aerova p-4 text-center">
+                <h4 class="fw-bold fs-5 mb-2">Real-Time Radio & Radar</h4>
+                <p class="small text-muted mb-0">Continuous air-to-ground radio communications and GPS tracking during the entire airborne voyage.</p>
+              </div>
+            </div>
+          </div>
+
+          <!-- Pillar 4 -->
+          <div class="col-lg-3 col-md-6">
+            <div class="card-aerova h-100">
+              <div class="card-img-wrapper" style="height: 170px;">
+                <img src="assets/images/safety-weather-refund.jpg" alt="Weather Refund">
+                <span class="card-badge-top"><i class="bi bi-arrow-repeat me-1"></i> 100% Refund</span>
+              </div>
+              <div class="card-body-aerova p-4 text-center">
+                <h4 class="fw-bold fs-5 mb-2">100% Weather Refund</h4>
+                <p class="small text-muted mb-0">If weather forces a cancellation, reschedule for free or receive an immediate 100% full refund with zero fees.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- CONTENT SECTION 3: PILOT CREDENTIALS & EQUIPMENT ENGINEERING -->
+    <section class="section-padding">
+      <div class="container">
+        <div class="row align-items-center g-5">
+          <div class="col-lg-6">
+            <div class="position-relative overflow-hidden rounded-4 shadow-lg" style="height: 360px;">
+              <img src="assets/images/hero-gallery.jpg" alt="Pilot Briefing" class="w-100 h-100 object-fit-cover">
+            </div>
+          </div>
+          <div class="col-lg-6">
+            <span class="badge-eyebrow badge-eyebrow-dark">PRE-FLIGHT BRIEFING</span>
+            <h2 class="section-title">What to Expect on Flight Day</h2>
+            <p class="section-desc mb-4">
+              Your comfort and confidence are our priority. Here is how our team prepares you before lift-off:
+            </p>
+
+            <div class="d-flex gap-3 mb-3">
+              <div class="bg-primary text-white rounded-circle p-2 d-flex align-items-center justify-content-center flex-shrink-0" style="width: 36px; height: 36px;">
+                <i class="bi bi-1-circle-fill"></i>
+              </div>
+              <div>
+                <h5 class="fw-bold mb-1">Pre-Flight Safety Orientation</h5>
+                <p class="small text-muted mb-0">15-minute briefing covering basket boarding, flight positions, and landing procedures.</p>
+              </div>
+            </div>
+
+            <div class="d-flex gap-3 mb-3">
+              <div class="bg-primary text-white rounded-circle p-2 d-flex align-items-center justify-content-center flex-shrink-0" style="width: 36px; height: 36px;">
+                <i class="bi bi-2-circle-fill"></i>
+              </div>
+              <div>
+                <h5 class="fw-bold mb-1">Weather & Thermal Inspection</h5>
+                <p class="small text-muted mb-0">Final wind test balloon release to verify smooth wind currents before inflation.</p>
+              </div>
+            </div>
+
+            <div class="d-flex gap-3">
+              <div class="bg-primary text-white rounded-circle p-2 d-flex align-items-center justify-content-center flex-shrink-0" style="width: 36px; height: 36px;">
+                <i class="bi bi-3-circle-fill"></i>
+              </div>
+              <div>
+                <h5 class="fw-bold mb-1">Chase Vehicle Escort</h5>
+                <p class="small text-muted mb-0">Our ground crew follows your flight trajectory via GPS to greet you at touchdown.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- CONTENT SECTION 4: SPLIT BENTO AERONAUTICAL SAFETY MATRIX -->
+    <section class="section-padding bg-watermark-section border-top border-bottom" style="background-image: url('assets/images/hero-weather.jpg');">
+      <div class="bg-watermark-overlay"></div>
+      <div class="container position-relative z-2">
+        <div class="section-header text-center mb-5">
+          <span class="badge-eyebrow badge-eyebrow-dark"><i class="bi bi-shield-fill-check me-1"></i> AERONAUTICAL TECH</span>
+          <h2 class="section-title">Passenger Safety & Gear Technology</h2>
+          <p class="section-desc">Explore the triple-redundant safety equipment onboard every AEROVA balloon voyage.</p>
+        </div>
+
+        <div class="row g-4 align-items-stretch">
+          <!-- Left Highlight Card -->
+          <div class="col-lg-4">
+            <div class="card-aerova p-4 h-100 text-white d-flex flex-column justify-content-between position-relative overflow-hidden" style="background: linear-gradient(135deg, #172B4D, #0F1A2E); border: 1px solid rgba(91, 155, 213, 0.3);">
+              <div>
+                <span class="badge bg-primary text-white rounded-pill px-3 py-2 small mb-3">FLIGHT SAFETY RATING</span>
+                <div class="display-3 fw-bold text-white mb-1">99.98%</div>
+                <h4 class="fw-bold text-white mb-3">FAA Equipment Reliability Score</h4>
+                <p class="small text-white-50 mb-4">
+                  Every basket, burner fuel line, and ripstop envelope undergoes mandatory 100-hour technician inspections before certification.
+                </p>
+              </div>
+
+              <div class="pt-3 border-top border-secondary-subtle">
+                <div class="small text-white mb-2"><i class="bi bi-check-circle-fill text-primary me-2"></i> Mandatory 100-Hour Inspections</div>
+                <div class="small text-white mb-2"><i class="bi bi-check-circle-fill text-primary me-2"></i> Dual Propane Fuel Valves</div>
+                <div class="small text-white"><i class="bi bi-check-circle-fill text-primary me-2"></i> High-Altitude Ripstop Envelope</div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Right Bento Grid -->
+          <div class="col-lg-8">
+            <div class="row g-4 h-100">
+              <!-- Top Long Card -->
+              <div class="col-12">
+                <div class="card-aerova p-4 bg-surface h-100 d-flex flex-column justify-content-between">
+                  <div class="d-flex align-items-start gap-3">
+                    <div class="badge bg-primary-subtle text-primary p-3 rounded-3 fs-3">
+                      <i class="bi bi-fire"></i>
+                    </div>
+                    <div>
+                      <h4 class="fw-bold mb-2">Triple-Redundant Dual-Burner System</h4>
+                      <p class="small text-muted mb-3">Dual liquid propane burners with separate fuel supply lines ensure independent operational capability at all altitudes, tested before every dawn launch.</p>
+                      <span class="badge bg-primary text-white rounded-pill px-3 py-1"><i class="bi bi-shield-check me-1"></i> 100% Thermal Redundancy</span>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <!-- Bottom Left Card -->
+              <div class="col-md-6">
+                <div class="card-aerova p-4 bg-surface h-100 d-flex flex-column justify-content-between">
+                  <div>
+                    <div class="badge bg-secondary-subtle text-danger p-3 rounded-3 fs-4 mb-3">
+                      <i class="bi bi-geo-alt-fill"></i>
+                    </div>
+                    <h5 class="fw-bold mb-2">GPS Trajectory Tracking</h5>
+                    <p class="small text-muted mb-3">Satellite transponders broadcast real-time telemetry to ground chase crews and ATC towers.</p>
+                  </div>
+                  <span class="small fw-semibold text-danger"><i class="bi bi-broadcast me-1"></i> Live Satellite Feed</span>
+                </div>
+              </div>
+
+              <!-- Bottom Right Card -->
+              <div class="col-md-6">
+                <div class="card-aerova p-4 bg-surface h-100 d-flex flex-column justify-content-between">
+                  <div>
+                    <div class="badge bg-primary-subtle text-primary p-3 rounded-3 fs-4 mb-3">
+                      <i class="bi bi-shield-lock-fill"></i>
+                    </div>
+                    <h5 class="fw-bold mb-2">Zero-Fee Refund Policy</h5>
+                    <p class="small text-muted mb-3">If wind currents exceed 8 knots or cloud ceilings drop below safe limits, 100% full refund is guaranteed.</p>
+                  </div>
+                  <span class="small fw-semibold text-primary"><i class="bi bi-arrow-repeat me-1"></i> Full Refund Protection</span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- CONTENT SECTION 5: FLIGHT SAFETY & WEATHER FAQ ACCORDION -->
+    <section class="section-padding bg-light-subtle border-top border-bottom">
+      <div class="container" style="max-width: 800px;">
+        <div class="section-header text-center">
+          <span class="badge-eyebrow badge-eyebrow-dark">COMMON QUESTIONS</span>
+          <h2 class="section-title">Safety & Weather FAQs</h2>
+          <p class="section-desc">Answers to common questions regarding wind conditions, clothing, and cancellation policies.</p>
+        </div>
+
+        <div class="accordion accordion-custom" id="safetyFaqAccordion">
+          <!-- Item 1 -->
+          <div class="accordion-item mb-3 border rounded-3 overflow-hidden shadow-sm">
+            <h2 class="accordion-header" id="faqHeadingOne">
+              <button class="accordion-button fw-bold fs-6" type="button" data-bs-toggle="collapse" data-bs-target="#faqCollapseOne" aria-expanded="true" aria-controls="faqCollapseOne">
+                How do pilots decide if weather is safe for flight?
+              </button>
+            </h2>
+            <div id="faqCollapseOne" class="accordion-collapse collapse show" aria-labelledby="faqHeadingOne" data-bs-parent="#safetyFaqAccordion">
+              <div class="accordion-body small">
+                Our pilot in command analyzes surface winds, upper-level wind shears, cloud ceiling heights, and local radar data 2 hours prior to dawn. If winds exceed 8 knots or visibility drops below 3 miles, we postpone the flight for guest safety.
+              </div>
+            </div>
+          </div>
+
+          <!-- Item 2 -->
+          <div class="accordion-item mb-3 border rounded-3 overflow-hidden shadow-sm">
+            <h2 class="accordion-header" id="faqHeadingTwo">
+              <button class="accordion-button collapsed fw-bold fs-6" type="button" data-bs-toggle="collapse" data-bs-target="#faqCollapseTwo" aria-expanded="false" aria-controls="faqCollapseTwo">
+                What happens if my flight is canceled due to bad weather?
+              </button>
+            </h2>
+            <div id="faqCollapseTwo" class="accordion-collapse collapse" aria-labelledby="faqHeadingTwo" data-bs-parent="#safetyFaqAccordion">
+              <div class="accordion-body small">
+                You receive an immediate notification via SMS/Email. You can easily reschedule for any future date of your choice via your Guest Dashboard, or request a 100% full refund credited back to your payment method instantly.
+              </div>
+            </div>
+          </div>
+
+          <!-- Item 3 -->
+          <div class="accordion-item mb-3 border rounded-3 overflow-hidden shadow-sm">
+            <h2 class="accordion-header" id="faqHeadingThree">
+              <button class="accordion-button collapsed fw-bold fs-6" type="button" data-bs-toggle="collapse" data-bs-target="#faqCollapseThree" aria-expanded="false" aria-controls="faqCollapseThree">
+                What should I wear for a sunrise balloon ride?
+              </button>
+            </h2>
+            <div id="faqCollapseThree" class="accordion-collapse collapse" aria-labelledby="faqHeadingThree" data-bs-parent="#safetyFaqAccordion">
+              <div class="accordion-body small">
+                We recommend comfortable layers, closed-toe sturdy shoes (sneakers or hiking boots), and a light jacket or sweater. Temperatures aloft are similar to ground temperature because the balloon travels with the wind.
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- CONTENT SECTION 6: FLY WITH TOTAL CONFIDENCE CTA -->
+    <section class="section-padding text-white position-relative" style="background-image: url('assets/images/hero-contact.jpg'); background-size: cover; background-position: center;">
+      <div class="hero-overlay"></div>
+      <div class="container position-relative z-2 text-center" style="max-width: 720px;">
+        <span class="badge-eyebrow mb-3"><i class="bi bi-shield-lock-fill me-1"></i> GUARANTEED SAFETY</span>
+        <h2 class="display-5 fw-bold text-white mb-3">Book With 100% Peace of Mind</h2>
+        <p class="lead opacity-90 mb-4">
+          Experience the clouds with premier FAA master certified pilots and complete weather refund protection.
+        </p>
+        <a href="packages.html" class="btn-primary-coral btn-lg px-5">
+          <i class="bi bi-balloon-fill me-2"></i> View Flights & Reserve
+        </a>
+      </div>
+    </section>
+  </main>
+
+  <!-- FOOTER -->
+  <footer class="aerova-footer">
+    <div class="container">
+      <div class="row g-4 mb-5">
+        <div class="col-lg-4">
+          <a class="aerova-brand text-white mb-3" href="index.html">
+            <div class="aerova-brand-icon">
+              <i class="bi bi-balloon-fill"></i>
+            </div>
+            <span>AEROVA</span>
+          </a>
+          <p class="footer-brand-desc">
+            Premier hot air balloon rides and high-altitude aerial adventures. Certified pilots, sunrise serenity, and lifelong memories above the clouds.
+          </p>
+        </div>
+
+        <div class="col-6 col-lg-2">
+          <h5 class="footer-title">Navigation</h5>
+          <ul class="footer-links">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="packages.html">Packages</a></li>
+            <li><a href="experiences.html">Experiences</a></li>
+            <li><a href="weather.html">Safety</a></li>
+            <li><a href="gallery.html">Gallery</a></li>
+            <li><a href="about.html">About</a></li>
+            <li><a href="contact.html">Contact</a></li>
+            <li><a href="dashboard.html">Dashboard</a></li>
+          </ul>
+        </div>
+
+        <div class="col-6 col-lg-3">
+          <h5 class="footer-title">Flight Categories</h5>
+          <ul class="footer-links">
+            <li><a href="packages.html">Sunrise Horizon Tour</a></li>
+            <li><a href="packages.html">Sunset Romance Escape</a></li>
+            <li><a href="packages.html">Private VIP Sky Charter</a></li>
+            <li><a href="packages.html">Family Aerial Adventure</a></li>
+            <li><a href="packages.html">Highline Alpine Expedition</a></li>
+          </ul>
+        </div>
+
+        <div class="col-lg-3">
+          <h5 class="footer-title">Contact & Base Launch</h5>
+          <p class="small footer-contact-item mb-2"><i class="bi bi-geo-alt-fill text-primary me-2"></i> 1400 Horizon Valley Way, Sky Ridge, CA</p>
+          <p class="small footer-contact-item mb-2"><i class="bi bi-telephone-fill text-primary me-2"></i> +1 (800) 555-AERO</p>
+          <p class="small footer-contact-item mb-3"><i class="bi bi-envelope-fill text-primary me-2"></i> fly@aerovaballoons.com</p>
+          <div class="d-flex flex-wrap align-items-center gap-2 mt-3">
+            <a href="login.html" class="btn-footer-login">Login</a>
+            <a href="dashboard.html" class="btn-footer-dashboard">Guest Dashboard</a>
+          </div>
+        </div>
+      </div>
+
+      <div class="footer-bottom d-flex flex-column flex-sm-row justify-content-between align-items-center gap-3">
+        <div>&copy; 2026 AEROVA Aerial Tours. All rights reserved.</div>
+        <div class="d-flex gap-3">
+          <a href="#" aria-label="Facebook"><i class="bi bi-facebook fs-5"></i></a>
+          <a href="#" aria-label="Instagram"><i class="bi bi-instagram fs-5"></i></a>
+          <a href="#" aria-label="YouTube"><i class="bi bi-youtube fs-5"></i></a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <button class="back-to-top js-back-to-top" title="Back to top" aria-label="Back to top">
+    <i class="bi bi-arrow-up-short fs-3"></i>
+  </button>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="assets/js/main.js"></script>
+</body>
+</html>
+
+
+

@@ -166,7 +166,7 @@ function initNavbar() {
       }
     });
 
-    // Close mobile menu ONLY on in-page anchor links (allows standard page navigation to work smoothly)
+    // Close mobile menu on clicking any in-page link
     const inPageLinks = navbarCollapse.querySelectorAll('a[href^="#"]:not([href="#"])');
     inPageLinks.forEach(item => {
       item.addEventListener('click', () => {
@@ -177,6 +177,13 @@ function initNavbar() {
     // Close on click outside header
     document.addEventListener('click', (e) => {
       if (navbarCollapse.classList.contains('show') && !header.contains(e.target)) {
+        closeMenu();
+      }
+    });
+
+    // Close on Escape key press
+    document.addEventListener('keydown', (e) => {
+      if (e.key === 'Escape' && navbarCollapse.classList.contains('show')) {
         closeMenu();
       }
     });
